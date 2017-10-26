@@ -1,0 +1,9 @@
+Options -MultiViews
+<FilesMatch "\.(eot|ttf|otf|woff)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+RewriteEngine On
+RewriteBase /shop/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([\s\S]*)$ index.php?url=$1 [L,NC,QSA]

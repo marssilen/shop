@@ -1,0 +1,226 @@
+/*.dk-box{background-color:#fff;border:1px solid #ebeced;-ms-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.1);-ms-box-shadow:0 1px 2px 0 rgba(0,0,0,.1);box-shadow:0 1px 2px 0 rgba(0,0,0,.1);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow:hidden}*/
+/*.current{color:#fff;background-color:#666;border-left-color:#666}*/
+/*li.current{background-color:#fff;box-shadow:0 0 3px #cccfd1;border-bottom:1px solid #fff}*/
+/*.navigation .mrg-auto ul.root>li>ul.level>li.current>a{color:#ef3f3e;border-bottom:2px solid #ee3e3e;background:url(../Image/Navigation/vtwo/arrow-3.png) no-repeat bottom center}*/
+/*li.current{color:#7e7e7e}*/
+/*span.current{color:#7e7e7e}*/
+/*.tabs .tabItem{float:right;cursor:pointer;height:32px;width:95px;border-left:1px solid #ccc;line-height:28px}*/
+/*.tabs .tabItem.current{color:#fff;background-color:#666;border-left-color:#666}*/
+/*.tabs .tabItem.last{border-left:0;width:90px}*/
+/*.tabs .sep{padding:0 2px}*/
+/*.tabs-list{overflow:hidden;position:relative;width:380px}*/
+
+.item a{padding:10px 10px;display:block;width:100%;max-height:45px}
+/*.item {direction:rtl;float:left;width:195px}*/
+.item p{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+/*.item .img{margin-left:195px;text-align:center;width:65px}*/
+/*.item .img img{max-width:55px;max-height:45px}*/
+/*.item a{display:table;width:100%;position:relative}*/
+.item a:hover{background-color:#3c3c3c;color:#fff}
+/*.item img{float:right;width:125px;margin:2px;border:1px solid #000}*/
+/*.item .mt{background-color:#000;border-radius:3px;color:#fff;display:block;font-weight:bold;height:14px;line-height:14px;opacity:.75;padding:1px 3px;position:absolute;right:6px;top:55px}*/
+.item{vertical-align:middle}
+/*.item a,.header .search-box #lookup .product .category .item a{width:100%;position:relative}*/
+/*.item .ui-menu-item-wrapper{display:block;padding:9px 15px;clear:both;font-weight:bold;line-height:16px;color:#555;white-space:nowrap;text-decoration:none;font-size:13px}*/
+/*.item .item__category{color:#2196f3;font-weight:normal}*/
+/*.item .state-highlight{font-weight:normal}*/
+/*.item .ui-menu-item-wrapper:hover{color:#000;cursor:pointer;text-decoration:none;background-color:#efefef;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;background-image:none}*/
+
+/*scroll panel*/
+#my{
+    overflow-x: hidden;
+    white-space: nowrap;
+    position:relative;
+}
+.section{
+    display: inline-block;
+    margin: 6px;
+    width: 250px;
+}
+.section h2{
+    text-align: center;
+}
+.scrollbtn{
+    position:absolute;top:50%;
+    background: transparent;
+    border: none;
+}
+/**/
+.fade_anim {
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0}
+    to   { opacity: 1}
+}
+.slideItem{
+    animation: fadein 2s;
+    display: none;
+}
+.img{
+    width: 100%;
+}
+.tag{
+    display:inline-block;padding-left:8px;padding-right:8px;text-align:center;
+    color:#000 !important;background-color:#87CEEB !important;
+    border-radius:4px !important;
+}
+.mymodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,1); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.mymodal-content {
+    background-color: #333;
+    margin: auto; /* 15% from the top and centered */
+    /*padding: 20px;*/
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.myclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.myclose:hover,
+.myclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*----*/
+.round_b{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+a{
+
+	text-decoration:none;
+}
+.fontbold{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:bold;
+}
+.font{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 0.875em;
+}
+.bold{
+		font-weight:bold;
+}
+  .mycontainer{
+	padding:8px;
+}
+.center{
+	max-width:1200px;
+	position:relative;
+	margin-left: auto ;
+ 	margin-right: auto ;
+}
+
+.item-center{
+align-self:center;
+}
+.top_background{
+	/*background:url(../img/top_bar_repeat.png) repeat-x;*/
+	background-size:contain;
+	margin-bottom:5px;
+	padding:18px;
+}
+.float_left{
+	float:left
+}
+.float_right{
+	float:right
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("http://localhost/amn//public/upload/amn4.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+ .xxx{
+            cursor: pointer;
+        }
+
+        
+        body,h3{
+            font-family: 'Yekan' ;
+            /*font-size: 15px;*/
+            text-align: right;
+            direction: rtl;
+        }
+        #footer{
+            margin: 0px;
+            padding: 0px;
+            height: 150px;
+            border: none;
+        }
+        body{
+            padding-bottom: 0px;
+        }
+        a:link, a:visited{
+            text-decoration:none;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        li ul li{
+            margin-left:-1em;
+        }
+        
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 6px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            /*opacity: 0.7;*/
+            color: black;
+            /*box-shadow: yellow 10px;*/
+        }
+        .fa-telegram {
+            background: #fff;
+            color: #00aff0;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }

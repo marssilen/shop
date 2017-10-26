@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'BMitra';
+    src: url('BMitra.eot');
+    src: url('BMitra.eot') format('embedded-opentype'),
+         url('BMitra.woff') format('woff'),
+         url('BMitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMitraBold';
+    src: url('BMitraBold.eot');
+    src: url('BMitraBold.eot') format('embedded-opentype'),
+         url('BMitraBold.woff') format('woff'),
+         url('BMitraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BRoya';
+    src: url('BRoya.eot');
+    src: url('BRoya.eot') format('embedded-opentype'),
+         url('BRoya.woff') format('woff'),
+         url('BRoya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTabassom';
+    src: url('BTabassom.eot');
+    src: url('BTabassom.eot') format('embedded-opentype'),
+         url('BTabassom.woff') format('woff'),
+         url('BTabassom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BTitr';
+    src: url('BTitr.eot');
+    src: url('BTitr.eot') format('embedded-opentype'),
+         url('BTitr.woff') format('woff'),
+         url('BTitr.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTitrTGE';
+    src: url('BTitrTGE.eot');
+    src: url('BTitrTGE.eot') format('embedded-opentype'),
+         url('BTitrTGE.woff') format('woff'), 
+         url('BTitrTGE.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Yekan';
+	src: url('Yekan.eot');
+	src: url('Yekan.eot') format('embedded-opentype'),
+	url('Yekan.woff') format('woff'),
+	url('Yekan.ttf') format('truetype'),
+	url('Yekan.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTraffic';
+    src: url('BTraffic.eot');
+    src: url('BTraffic.eot') format('embedded-opentype'),
+         url('BTraffic.woff') format('woff'),
+         url('BTraffic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'irsans';
+    src:url('irsans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ @font-face {
+    font-family: 'BNasim';
+    src: url('BNasim.eot');
+    src: url('BNasim.eot') format('embedded-opentype'),
+         url('BNasim.woff') format('woff'),
+         url('BNasim.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*iran sans*/
+@font-face {
+	font-family: 'IRANSans-web';
+	font-style:'normal';
+	src: url('IRANSansWeb(NoEn).eot');
+	src: url('IRANSansWeb(NoEn).eot') format('embedded-opentype'),  /* IE6â€“8 */ 
+	url('IRANSansWeb(NoEn).woff2') format('woff2'),  /* Chrome36+, Opera24+*/ 
+	url('IRANSansWeb(NoEn).woff') format('woff'), 
+	url('IRANSansWeb(NoEn).ttf') format('truetype');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'IRANSans-web';
+	src: url('IRANSansWeb(NoEn)_Bold.eot') format('eot'),  /* IE6â€“8 */ url('fonts/IRANSansWeb(NoEn)_Bold.woff2') format('woff2'),  /* Chrome36+, Opera24+*/ url('fonts/IRANSansWeb(NoEn)_Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	font-weight: bold;
+}
