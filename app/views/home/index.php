@@ -67,20 +67,17 @@ require_once('app/views/head.php'); ?>
 </div>
 <!--scrollbar-->
 <div style="position:relative;margin-top: 15px;margin-bottom: 15px;" dir="ltr">
+<h3 class="w3-center">محصولات</h3>
     <div id="my" class=".scroll">
         <?php for($i=1;$i<=10;$i++){ ?>
         <div class="section w3-card-2 w3-container" id="section<?=$i?>">
             <img class="img" src="http://localhost/shop/public/team1.jpg">
-            <h2>Section <?=$i?></h2>
-            <p>
-                ‘He scents thy footsteps in the snow<br>
-                Wheresoever thou dost go,<br>
-                Thro’ the wintry hail and rain.<br>
-                When wilt thou return again?<br>
-                ‘He scents thy footsteps in the snow<br>
-                Wheresoever thou dost go,<br>
-                Thro’ the wintry hail and rain.<br>
-                When wilt thou return again?<br>
+            <h2>آیتم <?=$i?></h2>
+            <p style="width:100%" dir="rtl">
+			فروش،نصب و اجرای انواع دوربین های آنالوگ<br>
+قابلیت انتقال تصویر رایگان<br>
+ضمانت نامه:<br>
+یکسال گارانتی و 5 سال خدمات پس از فروش<br>
             </p>
         </div>
         <?php } ?>

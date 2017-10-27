@@ -45,6 +45,7 @@
     background: transparent;
     border: none;
 }
+.scrollbtn:focus {outline:0;}
 /**/
 .fade_anim {
     animation: fadein 2s;
