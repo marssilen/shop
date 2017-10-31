@@ -28,8 +28,8 @@ $settings=$this->settings;
 
 <!-- Latest compiled JavaScript -->
 <script src="<?= URL ?>public/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="<?= URL ?>public/js/header.js.php"></script>
 <script src="<?= URL ?>public/js/myscript.js"></script>
-<script src="<?= URL ?>public/js/header.js.php"></script>
 <title><?php if(isset($title) and isset($settings['title']))echo $title.'-'.$settings['title'];
 elseif(isset($settings['title']))echo $settings['title'];else{?>MIM PHOTOGRAPHY<?php } ?></title>
 <style>
@@ -41,6 +41,7 @@ elseif(isset($settings['title']))echo $settings['title'];else{?>MIM PHOTOGRAPHY<
         }
         .slides{
             /*display: none;*/
+            padding: 10px;
         }
         
         body,h3{

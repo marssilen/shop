@@ -184,7 +184,6 @@ $user_id= Session::get('id');
 $this->formModel->add_address($user_id,$_POST);
 // }
 }else {
-echo "no";
 }
 $data=array();
 $this->view('cp/address_add',$data);
@@ -240,25 +239,25 @@ $this->view('cp/users_list',['data'=>$data,'pview'=>$pview],true);
 }
 function edit_user($id){
 
-if(isset($id)){
+    if(isset($id)){
 
-if(isset($_POST['sub'])){
-//print_r($_POST);
-$this->formModel->edit_user($id,array('email'=>htmlentities($_POST['email']),
-'phone'=>htmlentities($_POST['tel']),'role'=>htmlentities($_POST['role']),
-'block'=>htmlentities($_POST['block'])));
-}
-if(isset($_POST['reset_pass'])&&isset($_POST['password'])){
-    $this->formModel->edit_user($id,array('password'=>sha1(htmlentities($_POST['password']))));
-}
-$data=$this->formModel->get_user($id);
-//print_r($data);
-if(isset($data[0])){
-$data=$data[0];
-$this->view('cp/edit_user',$data,true);
-}
+    if(isset($_POST['sub'])){
+    //print_r($_POST);
+    $this->formModel->edit_user($id,array('email'=>htmlentities($_POST['email']),
+    'phone'=>htmlentities($_POST['tel']),'role'=>htmlentities($_POST['role']),
+    'block'=>htmlentities($_POST['block'])));
+    }
+    if(isset($_POST['reset_pass'])&&isset($_POST['password'])){
+        $this->formModel->edit_user($id,array('password'=>sha1(htmlentities($_POST['password']))));
+    }
+    $data=$this->formModel->get_user($id);
+    //print_r($data);
+    if(isset($data[0])){
+    $data=$data[0];
+    $this->view('cp/edit_user',$data,true);
+    }
 
-}
+    }
 }
 function edit_order($factor_id){
 	if(isset($factor_id)){
@@ -273,16 +272,18 @@ function edit_order($factor_id){
 
 
 function profile(){
-$user_id= Session::get('id');
-$data=$this->formModel->get_profile($user_id);
-$this->view('cp/profile',$data);
+    $user_id= Session::get('id');
+    $data=$this->formModel->get_profile($user_id);
+    $this->view('cp/profile',$data);
 }
 
 
     function purchased($page=1){
-        $page=(int)$page;
-        $data=$this->formModel->get_orders($page);
-        $this->view('cp/purchased',$data,true);
+        if(isAdmin()) {
+            $page = (int)$page;
+            $data = $this->formModel->get_orders($page);
+            $this->view('cp/purchased', $data, true);
+        }
     }
     function comments($verified=false){
         if($verified){

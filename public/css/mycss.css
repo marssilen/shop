@@ -25,7 +25,22 @@
 /*.item .item__category{color:#2196f3;font-weight:normal}*/
 /*.item .state-highlight{font-weight:normal}*/
 /*.item .ui-menu-item-wrapper:hover{color:#000;cursor:pointer;text-decoration:none;background-color:#efefef;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;background-image:none}*/
-
+#card_image{
+    cursor: crosshair;
+}
+.price-label{
+    color: red;
+    font-weight: bold;
+}
+.price-sec{
+}
+.info span{
+    display: block;
+}
+.title{
+    font-size:large;
+    text-align: center;
+}
 /*scroll panel*/
 #my{
     overflow-x: hidden;

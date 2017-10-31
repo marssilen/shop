@@ -3,25 +3,27 @@
 <div class="w3-row">
 <div class="" align="center"><!--left images-->
     <button onclick="document.getElementById('add_card_image_modal').style.display='block'" class="btn btn-info w3-margin-16">افزودن عکس</button>
-<div ng-app="myApp" ng-controller="myCtrl">
-<div class="row w3-margin-16">
-<div id='{{x}}' class="col-sm-3 col-xs-6 w3-padding-16" ng-repeat="x in names">
 
-    <a href="<?=URL?>item/{{x}}"><div class="w3-round  w3-card-2 w3-center mycard w3-white" style="padding:8px" >
-<div align="center" class="">{{x}}</div>
+<div class="row w3-margin-16">
+    <?php foreach ($data['data'] as $card){?>
+<div id='<?=$card?>' class="col-sm-3 col-xs-6 w3-padding-16">
+
+    <a href="<?=URL?>item/<?=$card?>"><div class="w3-round  w3-card-2 w3-center mycard w3-white" style="padding:8px" >
+<div align="center" class=""><?=$card?></div>
 <div class="w3-white" style="padding-bottom:0px;padding-left:10px;padding-right:10px">
-<img src="<?= URL ?>public/upload/{{x}}" style="width: 150px;height: 150px">
+<img src="<?= URL ?>public/upload/<?=$card?>" style="width: 150px;height: 150px">
 <p align="right" class="font" style="padding:0px">
 
 </p>
-<a class="btn btn-info" href="<?= URL ?>cp/delete_file/{{x}}">حذف</a>
-<a class="btn btn-success" href="<?= URL ?>cp/edit_file/{{x}}">ویرایش</a>
+<a class="btn btn-info" href="<?= URL ?>cp/delete_file/<?=$card?>">حذف</a>
+<a class="btn btn-success" href="<?= URL ?>cp/edit_file/<?=$card?>">ویرایش</a>
 </div>
 </div>
     </a>
 </div>
+    <?php }?>
 </div>
-</div>
+
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {

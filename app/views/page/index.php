@@ -7,13 +7,18 @@ require_once('app/views/head.php');
 
 <div class="container w3-row w3-card-2" style="margin-top: 75px;margin-bottom:50px;padding: 50px">
 <!--    <div id="match1" class="w3-col m4 s12 pad">-->
-<!--        <img id="imgmatch" style="width:100%" src="--><?//= URL.'public/upload/'.$data['data']['card_image']?><!--"/>-->
+<!--        <img id="imgmatch" style="width:100%" src="--><?php // URL.'public/upload/'.$data['data']['card_image']?><!--"/>-->
 <!--    </div>-->
 <!--    w3-col m8 s12-->
 <!--    <div id="match2" class="pad" style="padding: 14px">-->
 <!--    </div>-->
 <!--    ////////////////////////-->
-    <div class="w3-col m8 s12">
+    <div class="w3-col m8 s12" style="position: relative">
+        <div id="zoom_div" class="w3-card-2" style="position: absolute;display: none">
+            <div style="position: relative;width: 100%;height: 100%;overflow: hidden" dir="ltr">
+                <img id="zoom_image" style="position: absolute;left: 0px;top:0px;" src="<?= URL.'public/upload/'.$data['data']['card_image']?>">
+            </div>
+        </div>
         <p class="w3-margin-32 w3-round-medium w3-light-grey w3-container">
         <h3 class="w3-round w3-light-grey w3-center" style="padding: 5px"><?php if (!empty($data['data']['name'])){?><?= $data['data']['name']?><?php } ?></h3>
         </p>
@@ -36,7 +41,8 @@ require_once('app/views/head.php');
                         <?= $data['data']['price'] ?>
                     <?php } ?>
                 </p>
-                <input type="hidden" name="id" value="<?= $data['data']['id'] ?>"/>
+                <input type="hidden" name="id" value="<?= $data['data']['id'] ?>"/><?= $data['data']['id'] ?>
+
             </form>
             <button id="buy_btn" class="w3-btn w3-green" type="submit" name="submit" >افزودن به سبد خرید</button>
         </div>
@@ -46,7 +52,7 @@ require_once('app/views/head.php');
             <p style="text-align: left">
                 <a href="javascript:void(0)" id="fav_btn"><i class="w3-xlarge fa fa-heart-o"></i></a>
             </p>
-            <div class="w3-center"><img style="width:100%" src="<?= URL.'public/upload/'.$data['data']['card_image']?>"/></div>
+            <div class="w3-center"><img id="card_image" style="width: 100%" src="<?= URL.'public/upload/'.$data['data']['card_image']?>"/></div>
             <div class=" w3-padding-8" style="margin-top:20px">
                 <?php
                 $images=$data['data']['image'];
@@ -62,13 +68,13 @@ require_once('app/views/head.php');
 require_once ('app/views/footer.php');
 ?>
 <script>
-    var imgheight=$("#imgmatch").height();
-    var m1height=$("#match2").innerHeight();
-    if(imgheight>m1height) {
-        $("#match2").innerHeight(imgheight);
-    }else{
-        $("#match1").innerHeight(m1height);
-    }
+//    var imgheight=$("#imgmatch").height();
+//    var m1height=$("#match2").innerHeight();
+//    if(imgheight>m1height) {
+//        $("#match2").innerHeight(imgheight);
+//    }else{
+//        $("#match1").innerHeight(m1height);
+//    }
 </script>
 </body>
 </html>

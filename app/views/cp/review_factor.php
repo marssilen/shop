@@ -1,6 +1,8 @@
 
 <br>
-
+<script>
+    function query(url){$.get( url);};
+</script>
 
 <div class="w3-white container center" >
 <div class="w3-row">
@@ -52,7 +54,7 @@ foreach($data as $item){
 
 </table>
 <div>
-  <p class="w3-right w3-margin-16">مبلق قابل پرداخت: <?= $factor_price ?></p>
+  <p class="w3-right w3-margin-16">مبلغ قابل پرداخت: <?= $factor_price ?></p>
 </div>
 
 <!-- </form> -->
@@ -77,12 +79,11 @@ foreach($data as $item){
 // if(count($a)==0){
 //   echo '<b>آدرسی یافت نشد.</b>';
 // }
-?>
-<!-- <br>
+?><br>
 <a href="<?= URL.'cp/add_address'?>" class="w3-btn w3-blue w3-round">
 اضافه کردن آدرس
 </a>
-</p> -->
+</p>
 <input type="submit" name="pay" class="w3-btn w3-green w3-round " value="پرداخت"/>
 </div>
 

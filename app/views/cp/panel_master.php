@@ -74,6 +74,7 @@ $('.mother').click(function(e) {
                   <li><a href="<?= display(URL) ?>cp/menu"><span class="glyphicon glyphicon-menu-hamburger"></span> منو ها </a></li>
 				  <li><a href="<?= display(URL) ?>cp/purchased"><span class="glyphicon glyphicon-shopping-cart"></span> سفارشات</a></li>
                   <li><a href="<?= display(URL) ?>cp/settings"><span class="glyphicon glyphicon-cog"></span> تنظیمات </a></li>
+                  <li><a href="<?= display(URL) ?>cp/"><span class="glyphicon glyphicon-cog"></span>انبار داری</a></li>
                 </ul>
             </li>
             <li>
@@ -86,8 +87,12 @@ $('.mother').click(function(e) {
 			<li>
                 <a class="mother" href="#">گزارش <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul id="sectionThreeLinks" ><!--style="display: none;"-->
+                    <li><a href="<?= display(URL) ?>cp/factor_review">سبد خرید</a></li>
                   <li><a href="<?= display(URL) ?>cp/my_orders">سفارشات من</a></li>
                   <li><a href="<?= display(URL) ?>cp/my_favorites">لیست مورد علاقه</a></li>
+                  <li><a href="<?= display(URL) ?>cp/track">رهگیری سفارشات</a></li>
+
+<!--                    -->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/my_comments">نظرات من</a></li>-->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/#">پیام پشتیبانی</a></li>-->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/profile">پروفایل من</a></li>-->

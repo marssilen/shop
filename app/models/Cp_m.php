@@ -118,15 +118,13 @@ return $result;
 }
 function show_factor($factor_id){
 	$sql="SELECT purchased.id,purchased.item_id,purchased.num,purchased.price,items.name
-	FROM purchased INNER JOIN items ON items.id=purchased.item_id where factor_id=$factor_id";
+	FROM purchased LEFT JOIN items ON items.id=purchased.item_id where factor_id=$factor_id";
 	$result=$this->db->query($sql);
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	return $result->fetchAll();
 }
 function show_factor_main($factor_id){
-	$sql="SELECT *
-	FROM factors where factors.id=$factor_id";
-//	FROM factors INNER JOIN address ON factors.address=address.id where factors.id=$factor_id";
+	$sql="SELECT * FROM factors LEFT JOIN address ON factors.address=address.id where factors.id=$factor_id";
 	$result=$this->db->query($sql);
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	return $result->fetchAll();

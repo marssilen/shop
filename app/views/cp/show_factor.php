@@ -43,13 +43,10 @@ foreach($data['items'] as $item){
 
 </table>
     <P class="w3-right w3-margin-16">مبلغ فاکتور:<?= $factor_price ?></P>
-    <!-- <pre> -->
     <?php
-    // print_r($data);
-
     convert_to_shamsi($data['factor'][0]['date']);
     ?>
-  <!-- </pre> -->
+
 </div>
 <address class="w3-yellow w3-round w3-margin-4 mycontainer">
   آیدی فاکتور:<?= $data['factor'][0]['id']?><br>
@@ -71,3 +68,6 @@ foreach($data['items'] as $item){
 </div>
 </div>
 </div>
+<pre dir="ltr" style="text-align: left">
+         <?php print_r($data);?>
+     </pre>
