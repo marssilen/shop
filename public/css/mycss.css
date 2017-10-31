@@ -42,7 +42,20 @@
     text-align: center;
 }
 /*scroll panel*/
-#my{
+#scroll1{
+    padding-bottom: 15px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    position:relative;
+}
+#scroll2{
+    padding-bottom: 15px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    position:relative;
+}
+#scroll3{
+    padding-bottom: 15px;
     overflow-x: hidden;
     white-space: nowrap;
     position:relative;
@@ -55,12 +68,12 @@
 .section h2{
     text-align: center;
 }
-.scrollbtn{
+.sc{
     position:absolute;top:50%;
     background: transparent;
     border: none;
 }
-.scrollbtn:focus {outline:0;}
+.sc:focus {outline:0;}
 /**/
 .fade_anim {
     animation: fadein 2s;
@@ -75,6 +88,7 @@
 }
 .img{
     width: 100%;
+    max-height: 200px;
 }
 .tag{
     display:inline-block;padding-left:8px;padding-right:8px;text-align:center;
@@ -189,12 +203,22 @@ body, html {
             text-align: right;
             direction: rtl;
         }
-        #footer{
-            margin: 0px;
-            padding: 0px;
-            height: 150px;
-            border: none;
-        }
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+#content {
+    padding-bottom:150px; /* Height of the footer element */
+}
+#footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    margin: 0px;
+    padding: 1rem;
+    border: none;
+    height:100px;
+}
         body{
             padding-bottom: 0px;
         }

@@ -3,11 +3,12 @@ $title=$data['cat'];
 $desc="دسته بندی عکس "+$data['cat'];;
 require_once('app/views/head.php'); ?>
 <body>
+<div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
 <?php 
 //require_once('app/views/header.php'); 
 ?>
-
+<div id="content">
 <!--  -->
 <div class="w3-white w3-padding-16" dir="rtl">
 <div class="container w3-row">
@@ -53,8 +54,10 @@ require_once('app/views/head.php'); ?>
   <?=$data['pview']?>
 </div>
 </div>
+</div>
 <?php
 require_once ('app/views/footer.php');
 ?>
+</div>
 </body>
 </html>

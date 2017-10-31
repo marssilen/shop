@@ -1,9 +1,11 @@
 <?php require_once('app/views/head.php'); ?>
 <body>
+<div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
 <?php 
 //require_once('app/views/header.php'); 
 ?>
+    <div id="content">
 <div class="w3-row container" style="margin-top: 150px">
     <?php foreach ($data['items'] as $item) {?>
         <div class="w3-col m3 s6" style="padding: 5px">
@@ -24,8 +26,10 @@
   <?=$data['pview']?>
 </div>
 </div>
+    </div>
 <?php
 require_once ('app/views/footer.php');
 ?>
+</div>
 </body>
 </html>

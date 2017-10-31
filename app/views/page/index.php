@@ -3,8 +3,9 @@ $title=$data['data']['name'];
 require_once('app/views/head.php');
 ?>
 <body>
+<div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
-
+    <div id="content">
 <div class="container w3-row w3-card-2" style="margin-top: 75px;margin-bottom:50px;padding: 50px">
 <!--    <div id="match1" class="w3-col m4 s12 pad">-->
 <!--        <img id="imgmatch" style="width:100%" src="--><?php // URL.'public/upload/'.$data['data']['card_image']?><!--"/>-->
@@ -64,6 +65,7 @@ require_once('app/views/head.php');
 
     </div>
 </div>
+    </div>
 <?php
 require_once ('app/views/footer.php');
 ?>
@@ -76,5 +78,6 @@ require_once ('app/views/footer.php');
 //        $("#match1").innerHeight(m1height);
 //    }
 </script>
+</div>
 </body>
 </html>

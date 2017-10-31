@@ -26,4 +26,8 @@ class Home_m extends Model
         $result=$this->db->select("SELECT * FROM home_page LEFT JOIN category ON home_page.url_cat=category.id WHERE home_page.card=0");
         return $result;
     }
+    function get_recent(){
+        $result=$this->db->select("SELECT * FROM items ORDER BY id DESC LIMIT 10");
+        return $result;
+    }
 }
