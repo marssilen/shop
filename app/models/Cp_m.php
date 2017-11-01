@@ -26,7 +26,7 @@ return $result[0]['count'];
 }
     function home_get_all(){
         $result=$this->db->select("SELECT home_page.id,home_page.card,home_page.description,home_page.image,home_page.title,
-home_page.url_cat, category.cat FROM home_page LEFT JOIN category ON home_page.url_cat=category.id");
+home_page.url_cat, category.cat FROM home_page LEFT JOIN category ON home_page.url_cat=category.id ORDER BY id DESC ");
         return $result;
     }
     function change_home_item(){
