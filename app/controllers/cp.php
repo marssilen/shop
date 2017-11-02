@@ -45,17 +45,24 @@ public function home_page()
             $this->formModel->insert_home();
         }
         $req= array('id','pic');
-//        echo '<br><br><br>';
-//        print_r($_POST);
         if(form::check($_POST,$req,false)) {
-            echo 'yes ';
-            print_r($_POST);
             $imagename=	$this->upload_a_file();
             $this->formModel->home_pic($_POST['id'],$imagename);
         }
-        $data = $this->formModel->home_get_all();
+        $req= array('id','cat_pic');
+        if(form::check($_POST,$req,false)) {
+            $imagename=	$this->upload_a_file();
+            $this->formModel->home_cat_pic($_POST['id'],$imagename);
+        }
+        $req= array('id','change_cat','cat');
+        if(form::check($_POST,$req,false)) {
+            $this->formModel->home_cat_change($_POST['id'],$_POST['cat']);
+        }
+        $data = $this->formModel->home_get_all_card();
+        $cat_items=$this->formModel->get_all_home_cat();
         $items=$this->formModel->get_all_items();
-        $this->view('cp/home_page', ['data' => $data,'items'=>$items], true);
+        $cats=$this->formModel->get_cats();
+        $this->view('cp/home_page', ['data' => $data,'cat_items'=>$cat_items,'items'=>$items,'cats'=>$cats], true);
 
     }
 }

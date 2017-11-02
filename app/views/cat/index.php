@@ -1,6 +1,6 @@
 <?php
 $title=$data['cat'];
-$desc="دسته بندی عکس "+$data['cat'];;
+$desc="دسته بندی عکس ".$data['cat'];;
 require_once('app/views/head.php'); ?>
 <body>
 <div id="wrapper">
@@ -8,38 +8,25 @@ require_once('app/views/head.php'); ?>
 <?php 
 //require_once('app/views/header.php'); 
 ?>
-<div id="content">
-<!--  -->
-<div class="w3-white w3-padding-16" dir="rtl">
-<div class="container w3-row">
-  <div class="w3-col m6">
-  </div>
-  <div class="w3-col m6">
-  </div>
-</div>
-</div>
-<!--  -->
-<div class="container w3-row" style="padding: 50px">
-<div class="w3-col m3 s12 pad">
-        <div class="w3-card-2 w3-round">
-            <img src="<?= URL ?>public/profile.png" alt="profile" style="width: 100%">
-        </div>
- </div>
-    <div class="w3-col m1 s12 pad w3-light-grey">
+<div id="content" style="margin-top: 100px">
+<div class="w3-row container w3-white w3-card-2" style="margin-top: 10px;margin-bottom: 10px">
+    <div>
+        <p>
+            <a class="grey" href="">فروشگاه اینترنتی امن ایران</a>
+            <a class="grey" href=""><?=$data['cat']?></a>
+            <a class="grey" href="">...</a>
+        </p>
+        <p>
+            <span style="font-size: large"><?=$data['cat']?></span>
+            <span class="w3-text-gray">(نمایش 1-40 از 400)</span>
+        </p>
+        <hr>
     </div>
-<div class="w3-col m8 s12 pad w3-light-grey" style="padding: 14px">
-    <p>
-    <?=$settings['about']?>
-    </p>
-</div>
-
-</div>
-<div class="w3-row container" style="margin-top: 10px">
     <?php foreach ($data['items'] as $item) {?>
         <div class="w3-col m3 s6" style="padding: 5px">
             <div class="img_c w3-card-2 w3-hover-shadow w3-round">
-                <a href="<?=URL?>item/<?=$item['id'].'/'.$item['name']?>">
-                <img src="<?= URL ?>public/upload/<?=$item['card_image']?>" alt="MIM PHOTOGRAPHY" style="width: 100%">
+                <a href="<?=URL?>page/<?=$item['id'].'/'.$item['name']?>">
+                <img src="<?= URL ?>public/upload/<?=$item['card_image']?>" alt="AMN IRAN SHOP" style="width: 100%">
                 </a>
                 <p class="w3-center" style="margin-top: 10px;">
                     &ensp;<?=$item['name']?>

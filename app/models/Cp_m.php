@@ -24,10 +24,21 @@ function count($table){
 $result=$this->db->select("SELECT count(*) as count FROM $table");
 return $result[0]['count'];
 }
-    function home_get_all(){
+    function home_get_all_card(){
         $result=$this->db->select("SELECT home_page.id,home_page.card,home_page.description,home_page.image,home_page.title,
-home_page.url_cat, category.cat FROM home_page LEFT JOIN category ON home_page.url_cat=category.id ORDER BY id DESC ");
+home_page.url_cat, category.cat FROM home_page LEFT JOIN category ON home_page.url_cat=category.id WHERE home_page.card=1 ORDER BY id DESC ");
         return $result;
+    }
+    function get_cats(){
+        $result=$this->db->select("SELECT * FROM category");
+        return $result;
+    }
+    function get_all_home_cat(){
+        $result=$this->db->select("SELECT * FROM home_cat ORDER BY id ");
+        return $result;
+    }
+    function home_cat_change($id,$url){
+        $this->db->update("home_cat",array("url"=>$url),"id=".$id,false);
     }
     function change_home_item(){
         $this->db->update("home_page",array("title"=>$_POST['title'],
@@ -36,6 +47,9 @@ home_page.url_cat, category.cat FROM home_page LEFT JOIN category ON home_page.u
     }
     function home_pic($id,$image){
         $this->db->update("home_page",array("image"=>$image),"id=".$id);
+    }
+    function home_cat_pic($id,$image){
+        $this->db->update("home_cat",array("image"=>$image),"id=".$id);
     }
     function delete_home($id){
         $this->db->delete('home_page',"id=$id");

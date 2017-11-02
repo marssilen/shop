@@ -54,41 +54,55 @@ require_once('app/views/head.php'); ?>
             <div class="w3-row w3-margin-top">
                 <div class="w3-col s8" style="padding: 5px">
                     <div class="w3-card-2" style="padding: 5px;overflow: hidden">
-                        <img class="img" src="<?=URL?>public/upload/twothird.jpg">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][0]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][0]['image']?>">
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s4"  style="padding: 5px">
                     <div class="w3-card-2">
-                        <img class="img" src="<?=URL?>public/upload/third.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="w3-row w3-margin-top">
-                <div class="w3-col s4"  style="padding: 5px">
-                    <div class="w3-card-2">
-                        <img class="img" src="<?=URL?>public/upload/third.jpg">
-                    </div>
-                </div>
-                <div class="w3-col s4"  style="padding: 5px">
-                    <div class="w3-card-2">
-                        <img class="img" src="<?=URL?>public/upload/third.jpg">
-                    </div>
-                </div>
-                <div class="w3-col s4"  style="padding: 5px">
-                    <div class="w3-card-2">
-                        <img class="img" src="<?=URL?>public/upload/third.jpg">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][1]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][1]['image']?>">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="w3-row w3-margin-top">
                 <div class="w3-col s4"  style="padding: 5px">
                     <div class="w3-card-2">
-                        <img class="img" src="<?=URL?>public/upload/third.jpg">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][2]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][2]['image']?>">
+                        </a>
+                    </div>
+                </div>
+                <div class="w3-col s4"  style="padding: 5px">
+                    <div class="w3-card-2">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][3]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][3]['image']?>">
+                        </a>
+                    </div>
+                </div>
+                <div class="w3-col s4"  style="padding: 5px">
+                    <div class="w3-card-2">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][4]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][4]['image']?>">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s4"  style="padding: 5px">
+                    <div class="w3-card-2">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][5]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][5]['image']?>">
+                        </a>
                     </div>
                 </div>
                 <div class="w3-col s8" style="padding: 5px">
                     <div class="w3-card-2" style="padding: 5px;overflow: hidden">
-                        <img class="img" src="<?=URL?>public/upload/twothird.jpg">
+                        <a href="<?=URL.'cat/'.$data['cat_items'][6]['url']?>">
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][6]['image']?>">
+                        </a>
                     </div>
                 </div>
             </div>

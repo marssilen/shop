@@ -30,6 +30,12 @@
 #card_image{
     cursor: crosshair;
 }
+.grey{
+    color: #7f7f7f;
+}
+.grey:hover{
+    color: #2e6da4;
+}
 .price-label{
     color: red;
 }

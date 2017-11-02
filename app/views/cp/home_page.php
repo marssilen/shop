@@ -42,6 +42,150 @@
             </div>
         </div>
     </div>
+    <!--        items-->
+<!--    <div>-->
+<!--        <pre dir="ltr" style="text-align: left">-->
+<!--            --><?php
+////            print_r($data['cat_items']);
+//            ?>
+<!--        </pre>-->
+<!--    </div>-->
+    <div style="max-width:1000px;margin: auto;padding: 0px" class="">
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col s8" style="padding: 5px">
+                <div class="w3-card-2" style="padding: 5px;overflow: hidden">
+                    <form method="post" enctype="multipart/form-data" action="">
+                        <input type="hidden" value="1" name="id">
+                    <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                    </form>
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][0]['image']?>">
+                    <form method="post">
+                    <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="1" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][0]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+
+                </div>
+            </div>
+            <div class="w3-col s4"  style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="2" name="id">
+                    <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][1]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="2" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][1]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col s4"  style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="3" name="id">
+                    <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][2]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="3" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][2]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="w3-col s4"  style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="4" name="id">
+                    <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][3]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="4" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][3]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="w3-col s4"  style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="5" name="id">
+                    <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                        <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][4]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="5" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][4]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col s4"  style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="6" name="id">
+                        <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                    <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][5]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="6" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][5]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="w3-col s8" style="padding: 5px;overflow: hidden">
+                <div class="w3-card-2" style="padding: 5px;overflow: hidden">
+                    <form method="post" enctype="multipart/form-data" action=""><input type="hidden" value="7" name="id">
+                        <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+                        <button type="submit" name="cat_pic" class="btn btn-primary">تغییر عکس</button>
+                    <img class="img" src="<?=URL?>public/upload/<?=$data['cat_items'][6]['image']?>">
+                    </form>
+                    <form method="post">
+                        <button class="btn" type="submit" name="change_cat">تغییر</button>
+                        <input type="hidden" value="7" name="id">
+                        <select name="cat">
+                            <?php foreach ($data['cats'] as $cat){ ?>
+                                <option <?php if($data['cat_items'][6]['url']==$cat['id']) echo 'selected'; ?> value="<?=$cat['id']?>"><?= $cat['cat']?></option>
+                            <?php } ?>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--   offer scroll -->
     <div class="w3-round w3-light-gray">
         <div style="position:relative;margin-top: 15px;margin-bottom: 15px;" dir="ltr">

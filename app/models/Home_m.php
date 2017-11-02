@@ -30,4 +30,8 @@ class Home_m extends Model
         $result=$this->db->select("SELECT * FROM items ORDER BY id DESC LIMIT 10");
         return $result;
     }
+    function get_all_home_cat(){
+        $result=$this->db->select("SELECT * FROM home_cat ORDER BY id ");
+        return $result;
+    }
 }

@@ -8,6 +8,7 @@ class Home extends Controller
         $cards=$this->formModel->get_all_card();
         $div=$this->formModel->get_all_div();
         $recent=$this->formModel->get_recent();
-        $this->view('home/index',['settings'=>$settings,'offer'=>$cards,'mostview'=>$cards,'new'=>$recent]);
+        $cat_items=$this->formModel->get_all_home_cat();
+        $this->view('home/index',['settings'=>$settings,'offer'=>$cards,'mostview'=>$cards,'new'=>$recent,'cat_items'=>$cat_items]);
 	}
 }
