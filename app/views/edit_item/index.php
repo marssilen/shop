@@ -9,7 +9,7 @@ $images=  $data['data']['image'];
 <script src="<?= URL ?>public/js/ckeditor/ckeditor.js"></script>
 <div style="margin-top: 80px;margin-right:5px;padding: 0px">
   <div class="w3-card" style="display: inline-block;padding: 5px;">
-<a href="<?= 'delete_item/'.$data['data']['id']; ?>"><button class="w3-padding-2 w3-btn w3-red w3-round w3-border">حذف</button></a>
+<a href="<?= 'delete_item/'.$data['data']['id'].'/'.urlencode($data['data']['name']) ?>"><button class="w3-padding-2 w3-btn w3-red w3-round w3-border">حذف</button></a>
 <a href="<?=URL.'page/'.$data['data']['id']; ?>"><button class="w3-padding-2 w3-btn w3-blue w3-round w3-border">نمایش</button></a>
 </div>
 </div>

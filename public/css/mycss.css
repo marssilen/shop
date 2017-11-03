@@ -27,6 +27,17 @@
 /*.item .item__category{color:#2196f3;font-weight:normal}*/
 /*.item .state-highlight{font-weight:normal}*/
 /*.item .ui-menu-item-wrapper:hover{color:#000;cursor:pointer;text-decoration:none;background-color:#efefef;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;background-image:none}*/
+table{
+    border-collapse: collapse;
+}
+table caption{
+    text-align: right;
+}
+th, td {
+    text-align: right;
+    padding: 8px;
+}
+tr:nth-child(odd){background-color: #f2f2f2}
 #card_image{
     cursor: crosshair;
 }
@@ -35,6 +46,10 @@
 }
 .grey:hover{
     color: #2e6da4;
+}
+.sort a{
+    color: #575757;
+    margin-right: 20px;
 }
 .price-label{
     color: red;
