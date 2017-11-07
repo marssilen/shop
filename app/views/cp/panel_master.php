@@ -80,7 +80,8 @@ $('.mother').click(function(e) {
             <li>
                 <a class="mother" href="#">کاربران <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul id="sectionTwoLinks">
-                  <li><a href="<?= display(URL) ?>cp/get_users/"><span class="glyphicon glyphicon-user"></span> لیست کاربران</a></li>
+                    <li><a href="<?= display(URL) ?>cp/get_users/"><span class="glyphicon glyphicon-user"></span> لیست کاربران</a></li>
+                    <li><a href="<?= display(URL) ?>cp/get_users/"><span class="glyphicon glyphicon-user"></span>همکار تایید نشده</a> <span class="w3-badge w3-blue">12</span> </li>
                 </ul>
             </li>
             <?php } ?>
@@ -91,12 +92,12 @@ $('.mother').click(function(e) {
                   <li><a href="<?= display(URL) ?>cp/my_orders">سفارشات من</a></li>
                   <li><a href="<?= display(URL) ?>cp/my_favorites">لیست مورد علاقه</a></li>
                   <li><a href="<?= display(URL) ?>cp/track">رهگیری سفارشات</a></li>
-
+                    <li><a href="<?= display(URL) ?>cp/address">آدرس های من</a></li>
 <!--                    -->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/my_comments">نظرات من</a></li>-->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/#">پیام پشتیبانی</a></li>-->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/profile">پروفایل من</a></li>-->
-<!--                  <li><a href="--><?//= display(URL) ?><!--cp/address">آدرس های من</a></li>-->
+
                 </ul>
             </li>
         </ul>
@@ -107,6 +108,7 @@ $('.mother').click(function(e) {
 
   </div>
   <div class="col-xs-12 col-sm-10">
+      <br>
       <?php
       require_once 'app/views/'.$this->page.'.php';
       ?>

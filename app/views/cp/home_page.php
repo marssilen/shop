@@ -4,21 +4,19 @@
          style="height: 400px;max-width:1000px;overflow: hidden">
         <div class="">
             <div class="fade_anim slides center w3-twothird w3-white" style="height: 400px;">
-                <?php for($i=0;$i<10;$i++){ ?>
-                    <a id="slide<?=$i?>" class="slideItem link" style="position: relative" title="" href="">
+                <?php $i=0;foreach ($data['slider'] as $slide){$i++;?>
+                    <a id="slide<?=$slide['id']?>" class="slideItem link" style="position: relative" title="" href="<?=$slide['url']?>">
                         <div dir="ltr" style="margin-top: 40px">
                             <div class="w3-col s6 w3-center" style="padding: 5px">
-                                <div style="font-size: 28px;color: #3c3c3c">تصویر</div>
+                                <div style="font-size: 28px;color: #3c3c3c"><?=$slide['title']?></div>
                                 <img class="" src="<?=URL?>public/upload/speaker.jpg">
                             </div>
                             <div class="w3-col s6 w3-center" dir="rtl" style="padding: 15px">
                                 <div style="text-align: right;color: red;font-size: 28px">پشنهاد ویژه امروز</div>
-                                <div class="w3-row"><span class="w3-col s8 w3-green title">100 تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;">200</span></div>
-                                <p style="text-align: right">
-                                    مجهز به صفحه نمایش 100 اینچی<br>
-                                    لنز با وضوح بالا<br>
-                                    زیبایی بی نظیر
+                                <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old-price']?></span></div>
+                                <p style="text-align: right"><?=$slide['decs']?>
                                 </p>
+                                <button class="w3-btn w3-round w3-blue" onclick="document.getElementById('pic-id').value='<?=$slide['id']?>';document.getElementById('slide-id').value='<?=$slide['id']?>';document.getElementById('slider-form').style.display='block';return false;">change</button>
                             </div>
                         </div>
                         <!--                <div data-seconds-left="38674.317" class="timer"><span class="timer__holder timer__holder--hours"><span>1</span><span>0</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--minutes"><span>3</span><span>3</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--seconds"><span>1</span><span>1</span></span>-->
@@ -28,16 +26,9 @@
             </div>
             <div class="w3-third">
                 <ul class="" style="padding: 0px;margin: 0px">
-                    <li class="item"><a onclick="slideto(1)" onmousedown="return false" title="خرید اینترنتی کیسه زباله" class="tabItem" href="javascript:void(0)"><span class="title">کیسه زباله</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(2)" onmousedown="return false" title="خرید اینترنتی ست چاقوی" class="tabItem current" href="javascript:void(0)"><span class="title">ست چاقوی</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(3)" onmousedown="return false" title="خرید اینترنتی هدست واقعیت مجازی" class="tabItem" href="javascript:void(0)"><span class="title">هدست واقعیت مجازی</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(4)" onmousedown="return false" title="خرید اینترنتی تلفن " class="tabItem" href="javascript:void(0)"><span class="title">تلفن </span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(5)" onmousedown="return false" title="خرید اینترنتی آب میوه گیری دستی" class="tabItem" href="javascript:void(0)"><span class="title">آب میوه گیری دستی</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(6)" onmousedown="return false" title="خرید اینترنتی ماگ " class="tabItem" href="javascript:void(0)"><span class="title">ماگ </span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(7)" onmousedown="return false" title="خرید اینترنتی سرویس خواب نرم بافت" class="tabItem" href="javascript:void(0)"><span class="title">سرویس خواب نرم بافت</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(8)" onmousedown="return false" title="خرید اینترنتی هدفون " class="tabItem" href="javascript:void(0)"><span class="title">هدفون </span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(9)" onmousedown="return false" title="خرید اینترنتی نیم ست" class="tabItem" href="javascript:void(0)"><span class="title">نیم ست</span><span class="arr"></span></a></li>
-                    <li class="item"><a onclick="slideto(10)" onmousedown="return false" title="خرید اینترنتی کیف پول چرم" class="tabItem" href="javascript:void(0)"><span class="title">کیف پول چرم</span><span class="arr"></span></a></li>
+                    <?php $i=0;foreach ($data['slider'] as $slide){$i++;?>
+                    <li class="item"><a onclick="slideto(<?=$i?>)" onmousedown="return false" title="<?=$slide['title']?>خرید اینترنتی " class="tabItem" href="javascript:void(0)"><span class="title"><?=$slide['title']?></span><span class="arr"></span></a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -298,3 +289,37 @@
 
     });
 </script>
+<div class="w3-modal" id="slider-form">
+    <div class="w3-modal-content">
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="slide-id" value="">
+            <div class="w3-panel w3-rightbar">
+            <label for="title">title</label>
+            <input class="w3-input" id="title" name="title" placeholder="title">
+            </div>
+            <div class="w3-panel w3-rightbar">
+                <label for="old-price">old price</label>
+                <input class="w3-input" id="old-price" name="old-price" placeholder="old price">
+            </div>
+            <div class="w3-panel w3-rightbar">
+                <label for="price">price</label>
+                <input class="w3-input" id="price" name="price" placeholder="price">
+            </div>
+            <div class="w3-panel w3-rightbar">
+                <label for="url">URL</label>
+                <input class="w3-input" id="url" name="url" placeholder="url">
+            </div>
+            <div class="w3-panel w3-rightbar">
+                <label for="desc">description</label>
+                <textarea class="w3-input" id="desc" name="desc" placeholder="description"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" name="change-slider">change</button>
+            <button class="btn btn-danger" onclick="document.getElementById('slider-form').style.display='none';return false;">cancel</button>
+        </form>
+        <form method="post" enctype="multipart/form-data" action="">
+            <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
+            <input name="id" type="hidden" id="pic-id" value="">
+            <button type="submit" name="slide-pic" class="btn btn-primary">ارسال</button>
+        </form>
+    </div>
+</div>

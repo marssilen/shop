@@ -58,18 +58,37 @@ public function home_page()
         if(form::check($_POST,$req,false)) {
             $this->formModel->home_cat_change($_POST['id'],$_POST['cat']);
         }
+        $req= array('id','change-slider','title','old-price','price','url','desc');
+        if(form::check($_POST,$req,false)) {
+//            $this->formModel->home_cat_change($_POST['id'],$_POST['cat']);
+            echo '<br>';
+            echo '<br>';
+            echo '<br>';
+            echo '<br>';
+            echo '<br>';
+            print_r($_POST);
+        }
+        $req= array('id','slide-pic');
+        if(form::check($_POST,$req,false)) {
+            echo $this->upload_a_file(true);
+//            $this->formModel->home_pic($_POST['id'],$imagename);
+        }
         $data = $this->formModel->home_get_all_card();
         $cat_items=$this->formModel->get_all_home_cat();
         $items=$this->formModel->get_all_items();
         $cats=$this->formModel->get_cats();
-        $this->view('cp/home_page', ['data' => $data,'cat_items'=>$cat_items,'items'=>$items,'cats'=>$cats], true);
+        $slider=$this->formModel->get_slider();
+        $this->view('cp/home_page', ['data' => $data,'cat_items'=>$cat_items,'items'=>$items,'cats'=>$cats,'slider'=>$slider], true);
 
     }
 }
-    private function upload_a_file(){
+    private function upload_a_file($disable=false){
         $destination = 'public/upload/';
         $upload = new Upload($destination);
         try {
+            if($disable){
+                $upload->setDisableExtension();
+            }
             $upload->setMaxSize($this->max_file_size);
             $upload->move();
             $result_upload = $upload->getMessages();
@@ -197,9 +216,9 @@ $data=array();
 $this->view('cp/address_add',$data);
 }
 function address(){
-$data=$this->formModel->get_address();
-print_r($data);
-$this->view('cp/my_address',$data);
+$address=$this->formModel->get_address();
+print_r($address);
+$this->view('cp/my_address',$address);
 }
 function address_detail($id){
 // validate id
@@ -333,6 +352,7 @@ function profile(){
         }
         function factor_review(){
             $factor_id= $this->formModel->get_factor();
+            $address=$this->formModel->get_address();
             $req=array('sel');
             //item hay sel vojood dashte bashad
             if(form::check($_POST, $req)){
@@ -347,7 +367,7 @@ function profile(){
                 die();
             }
             $data=$this->formModel->show_factor($factor_id);
-            $this->view('cp/review_factor',$data);
+            $this->view('cp/review_factor',['data'=>$data,'address'=>$address]);
         }
     function remove_from_list($id){
         $this->formModel->remove_from_list($id);

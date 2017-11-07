@@ -33,7 +33,7 @@ require_once('app/views/head.php'); ?>
     <?php foreach ($data['items'] as $item) {?>
         <div class="w3-col m3 s6" style="padding: 5px">
             <div class="img_c w3-border w3-hover-border-blue">
-                <a href="<?=URL?>page/<?=$item['id'].'/'.$item['name']?>">
+                <a href="<?=URL?>page/<?=$item['id'].'/'.urlencode($item['name'])?>">
                 <img src="<?= URL ?>public/upload/<?=$item['card_image']?>" alt="AMN IRAN SHOP" style="width: 100%">
                 </a>
                 <p class="w3-center" style="margin-top: 10px;">

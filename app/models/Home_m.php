@@ -9,7 +9,9 @@ class Home_m extends Model
 		$result=$this->db->query($sql);
 
 	}
-
+	function get_slider(){
+	    return $this->db->select("select * from slider");
+    }
     function get_settings(){
         $data=$this->db->select("SELECT * from settings");
         if(!isset($data[0])){

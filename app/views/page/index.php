@@ -24,9 +24,11 @@ require_once('app/views/head.php');
         <h3 class="w3-round w3-light-grey w3-center" style="padding: 5px"><?php if (!empty($data['data']['name'])){?><?= $data['data']['name']?><?php } ?></h3>
         </p>
         <div class="w3-margin-32 w3-container w3-padding-16" id="columnTwo">
+            <div>
             <p>
                 <?= $data['data']['long_description'] ?>
             </p>
+            </div>
             <div>
                 <?php foreach ($data['tags'] as $tag){?>
                     <a href="<?=URL.'tag/&tag='.$tag['tag']?>"><span class="tag"><?= $tag['tag']?></span></a>

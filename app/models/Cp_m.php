@@ -20,6 +20,9 @@ function change_file($id,$name,$alt,$oldfilename){
             $this->db->insert('image',array('image'=>$new_image,'image_thumb'=>$new_image,'alt'=>$alt));
         }
     }
+    function get_slider(){
+        return $this->db->select("select * from slider");
+    }
 function count($table){
 $result=$this->db->select("SELECT count(*) as count FROM $table");
 return $result[0]['count'];
@@ -98,7 +101,7 @@ $this->db->insert('address',array(
 }
 function get_address(){
 $user_id= Session::get('id');
-return $this->db->select('select id,name,c_phone,s_phone,postal_code from address where user_id=:user_id and disable=0',array('user_id'=>$user_id));
+return $this->db->select('select id,name,c_phone,s_phone,postal_code,address from address where user_id=:user_id and disable=0',array('user_id'=>$user_id));
 }
 function remove_address($id){
 	$user_id= Session::get('id');

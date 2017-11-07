@@ -13,6 +13,10 @@ class Upload {
   protected $_imagename = '';
   protected $_success = false;
   protected $_nofile = false;
+    protected $disable = false;
+    public function setDisableExtension(){
+        $this->disable=true;
+    }
   public function __construct($path) {
 	if (!is_dir($path) || !is_writable($path)) {
 	  throw new Exception("$path must be a valid, writable directory.");
@@ -92,6 +96,9 @@ class Upload {
   }
   
   protected function checkType($filename, $type) {
+      if($this->disable){
+          return true;
+      }
 	if (empty($type)) {
 	  return false;
 	} elseif (!in_array($type, $this->_permitted)) {

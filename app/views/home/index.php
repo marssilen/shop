@@ -3,48 +3,35 @@ require_once('app/views/head.php'); ?>
 <body>
 <div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
-<br>
-<br>
-<br>
     <div id="content">
 <div id="amazingoffer" class="dk-box mrg-bottom waiting w3-row w3-light-grey center w3-card-2 w3-round"
      style="height: 400px;max-width:1000px;overflow: hidden">
     <div class="">
         <div class="fade_anim slides center w3-twothird w3-white" style="height: 400px;">
-            <?php for($i=0;$i<10;$i++){ ?>
-            <a id="slide<?=$i?>" class="slideItem link" style="position: relative" title="" href="">
-                <div dir="ltr" style="margin-top: 40px">
-                    <div class="w3-col s6 w3-center" style="padding: 5px">
-                        <div style="font-size: 28px;color: #3c3c3c">تصویر</div>
-                        <img class="" src="<?=URL?>public/upload/speaker.jpg">
+            <?php foreach ($data['slider'] as $slide){?>
+                <a id="slide<?=$slide['id']?>" class="slideItem link" style="position: relative" title="" href="<?=$slide['url']?>">
+                    <div dir="ltr" style="margin-top: 40px">
+                        <div class="w3-col s6 w3-center" style="padding: 5px">
+                            <div style="font-size: 28px;color: #3c3c3c"><?=$slide['title']?></div>
+                            <img class="" src="<?=URL?>public/upload/speaker.jpg">
+                        </div>
+                        <div class="w3-col s6 w3-center" dir="rtl" style="padding: 15px">
+                            <div style="text-align: right;color: red;font-size: 28px">پشنهاد ویژه امروز</div>
+                            <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old-price']?></span></div>
+                            <p style="text-align: right"><?=$slide['decs']?>
+                            </p>
+                        </div>
                     </div>
-                    <div class="w3-col s6 w3-center" dir="rtl" style="padding: 15px">
-                        <div style="text-align: right;color: red;font-size: 28px">پشنهاد ویژه امروز</div>
-                        <div class="w3-row"><span class="w3-col s8 w3-green title">100 تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;">200</span></div>
-                        <p style="text-align: right">
-                            مجهز به صفحه نمایش 100 اینچی<br>
-                            لنز با وضوح بالا<br>
-                            زیبایی بی نظیر
-                        </p>
-                    </div>
-                </div>
-<!--                <div data-seconds-left="38674.317" class="timer"><span class="timer__holder timer__holder--hours"><span>1</span><span>0</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--minutes"><span>3</span><span>3</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--seconds"><span>1</span><span>1</span></span>-->
-<!--                </div>-->
-            </a>
+                    <!--                <div data-seconds-left="38674.317" class="timer"><span class="timer__holder timer__holder--hours"><span>1</span><span>0</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--minutes"><span>3</span><span>3</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--seconds"><span>1</span><span>1</span></span>-->
+                    <!--                </div>-->
+                </a>
             <?php } ?>
         </div>
         <div class="w3-third">
             <ul class="" style="padding: 0px;margin: 0px">
-                <li class="item"><a onclick="slideto(1)" onmousedown="return false" title="خرید اینترنتی کیسه زباله" class="tabItem" href="javascript:void(0)"><span class="title">کیسه زباله</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(2)" onmousedown="return false" title="خرید اینترنتی ست چاقوی" class="tabItem current" href="javascript:void(0)"><span class="title">ست چاقوی</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(3)" onmousedown="return false" title="خرید اینترنتی هدست واقعیت مجازی" class="tabItem" href="javascript:void(0)"><span class="title">هدست واقعیت مجازی</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(4)" onmousedown="return false" title="خرید اینترنتی تلفن " class="tabItem" href="javascript:void(0)"><span class="title">تلفن </span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(5)" onmousedown="return false" title="خرید اینترنتی آب میوه گیری دستی" class="tabItem" href="javascript:void(0)"><span class="title">آب میوه گیری دستی</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(6)" onmousedown="return false" title="خرید اینترنتی ماگ " class="tabItem" href="javascript:void(0)"><span class="title">ماگ </span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(7)" onmousedown="return false" title="خرید اینترنتی سرویس خواب نرم بافت" class="tabItem" href="javascript:void(0)"><span class="title">سرویس خواب نرم بافت</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(8)" onmousedown="return false" title="خرید اینترنتی هدفون " class="tabItem" href="javascript:void(0)"><span class="title">هدفون </span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(9)" onmousedown="return false" title="خرید اینترنتی نیم ست" class="tabItem" href="javascript:void(0)"><span class="title">نیم ست</span><span class="arr"></span></a></li>
-                <li class="item"><a onclick="slideto(10)" onmousedown="return false" title="خرید اینترنتی کیف پول چرم" class="tabItem" href="javascript:void(0)"><span class="title">کیف پول چرم</span><span class="arr"></span></a></li>
+                <?php $i=0;foreach ($data['slider'] as $slide){$i++?>
+                    <li class="item"><a onclick="slideto(<?=$i?>)" onmousedown="return false" title="<?=$slide['title']?>خرید اینترنتی " class="tabItem" href="javascript:void(0)"><span class="title"><?=$slide['title']?></span><span class="arr"></span></a></li>
+                <?php } ?>
             </ul>
         </div>
     </div>
@@ -111,15 +98,12 @@ require_once('app/views/head.php'); ?>
 <div style="position:relative;margin-top: 15px;margin-bottom: 15px;" dir="ltr">
 <h3 class="w3-center">پیشنهاد ما</h3>
     <div id="scroll1" class=".scroll">
-        <?php for($i=1;$i<=count($data['offer']);$i++){ ?>
+        <?php $i=0;foreach($data['offer'] as $offer){$i++; ?>
         <div class="section w3-card-2 w3-container" id="section<?=$i?>">
-            <img class="img" src="http://localhost/shop/public/team1.jpg">
-            <h2>آیتم <?=$i?></h2>
+            <img class="img" src="http://localhost/shop/public/<?=$offer['image']?>">
+            <h2><?=$offer['title']?></h2>
             <p style="width:100%" dir="rtl">
-			فروش،نصب و اجرای انواع دوربین های آنالوگ<br>
-قابلیت انتقال تصویر رایگان<br>
-ضمانت نامه:<br>
-یکسال گارانتی و 5 سال خدمات پس از فروش<br>
+                <?=$offer['description'];print_r($offer)?>
             </p>
         </div>
         <?php } ?>

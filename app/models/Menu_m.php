@@ -5,6 +5,6 @@ class Menu_m extends Model{
 	}
   function get_menu($parent=0){
   //return $this->db->select("SELECT id,menu,href FROM menu WHERE parent= :parent",array('parent' => $parent));
-  	return $this->db->select("SELECT * FROM menu");
+  	return $this->db->select("SELECT * FROM menu WHERE parent=:pa",array('pa'=>$parent));
   }
 }

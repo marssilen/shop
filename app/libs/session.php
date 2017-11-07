@@ -1,7 +1,7 @@
 <?php
 Class Session{
 	public static function init(){
-		ini_set('session.cookie_lifetime',60*60*24);//24 hours
+		ini_set('session.cookie_lifetime',60*60*24*7);//24 hours*7=week
 		ini_set('session.cookie_httponly',1);
 		ini_set('session.use_only_cookies',1);
 		@session_start();
@@ -23,7 +23,7 @@ Class Session{
 	}
 	public static function timeout(){
 		$now=time();
-		$timelimit=24*60*60;
+		$timelimit=24*60*60*7;
 		if($now > Session::get('start')+$timelimit){
 			Session::destroy();
 			return true;

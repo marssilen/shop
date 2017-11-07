@@ -26,8 +26,8 @@
 
 <?php
 $factor_price=0;
-if(count($data)!=0){
-foreach($data as $item){
+if(count($data['data'])!=0){
+foreach($data['data'] as $item){
     $last_price=$item['price']*$item['num'];//-$item['barging'];
     $factor_price+=$last_price;
 	?>
@@ -53,16 +53,23 @@ foreach($data as $item){
 ?>
 
 </table>
-<div>
-  <p class="w3-right w3-margin-16">مبلغ قابل پرداخت: <?= $factor_price ?></p>
-</div>
-
-<!-- </form> -->
 </div>
 <div  class="w3-container">
-  ارسال از طریق باربری:
-  <br>
-  <textarea name="address" style="width:100%" name="terminal" placeholder="آدرس به صورت استان-شهر-مرکز باربری یا ترمینال وارد شود"></textarea>
+    <p class="w3-margin-16">مبلغ قابل پرداخت: <?= $factor_price ?></p>
+    <?php
+    if(count($data['address'])!=0){
+        ?>
+        <p> لطفا آدرس خود را انخاب نمایید</p>
+        <?php
+        foreach($data['address'] as $address) {
+        ?>
+        <input id="address" name="address" type="radio" value="<?=$address['id']?>"><?=$address['name'].'-'.$address['address'].'-'.$address['postal_code']?><br>
+        <?php
+         }}else{?>
+        <p> لطفا آدرس خود را اضافه کنید</p>
+        <?php
+    }
+    ?>
 </div>
 <div  class="w3-container w3-padding-16">
 <!-- <form action=""> -->
