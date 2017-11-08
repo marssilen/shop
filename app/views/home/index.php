@@ -99,12 +99,14 @@ require_once('app/views/head.php'); ?>
 <h3 class="w3-center">پیشنهاد ما</h3>
     <div id="scroll1" class=".scroll">
         <?php $i=0;foreach($data['offer'] as $offer){$i++; ?>
-        <div class="section w3-card-2 w3-container" id="section<?=$i?>">
-            <img class="img" src="http://localhost/shop/public/<?=$offer['image']?>">
-            <h2><?=$offer['title']?></h2>
-            <p style="width:100%" dir="rtl">
-                <?=$offer['description'];print_r($offer)?>
-            </p>
+            <div class="section w3-card-2 w3-hover-shadow" id="section<?=$i?>">
+            <a href="<?=URL.'page/'.$offer['url_cat'].'/'.urlencode($offer['title'])?>">
+            <img class="img" src="<?=URL.'public/upload/'.$offer['image']?>">
+                <p style="width:100%;text-align: center;margin-top: 5px" dir="rtl" class="w3-container">
+                    <?=$offer['title']?><br>
+                    <span class="w3-text-green"><?=$offer['description']?> تومان</span>
+                </p>
+            </a>
         </div>
         <?php } ?>
     </div>
@@ -117,17 +119,16 @@ require_once('app/views/head.php'); ?>
 <div style="position:relative;margin-top: 15px;margin-bottom: 15px;" dir="ltr">
 <h3 class="w3-center">پر بازدید ها</h3>
     <div id="scroll2" class=".scroll">
-        <?php for($i=1;$i<=count($data['mostview']);$i++){ ?>
-        <div class="section w3-card-2 w3-container" id="section<?=$i?>">
-            <img class="img" src="http://localhost/shop/public/upload/gate.jpg">
-            <h2>آیتم <?=$i?></h2>
-            <p style="width:100%" dir="rtl">
-			فروش،نصب و اجرای انواع دوربین های آنالوگ<br>
-قابلیت انتقال تصویر رایگان<br>
-ضمانت نامه:<br>
-یکسال گارانتی و 5 سال خدمات پس از فروش<br>
-            </p>
-        </div>
+        <?php $i=0;foreach($data['mostview'] as $mcard){$i++ ?>
+                <div class="section w3-card-2 w3-hover-shadow" id="section<?=$i?>">
+                <a href="<?=URL.'page/'.$mcard['id'].'/'.urlencode($mcard['name'])?>">
+                    <img class="img" src="<?= URL.'public/upload/'.$mcard['card_image']?>">
+                    <p style="width:100%;text-align: center;margin-top: 5px" dir="rtl" class="w3-container">
+                        <?=$mcard['name']?><br>
+                        <span class="w3-text-green"><?=$mcard['price']?> تومان</span>
+                    </p>
+                </a>
+            </div>
         <?php } ?>
     </div>
     <button class="scrollbtn2 sc" style="right:0px;" href="next"><i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -142,10 +143,10 @@ require_once('app/views/head.php'); ?>
         <?php $i=0;
         foreach($data['new'] as $item){$i++ ?>
 
-        <div class="section w3-card-2 w3-container w3-hover-shadow" id="section<?=$i?>">
-            <a href="#">
+        <div class="section w3-card-2 w3-hover-shadow" id="section<?=$i?>">
+            <a href="<?=URL.'page/'.$item['id'].'/'.urlencode($item['name'])?>">
             <img class="img" src="<?= URL.'public/upload/'.$item['card_image']?>">
-            <p style="width:100%;text-align: center;margin-top: 5px" dir="rtl">
+                <p style="width:100%;text-align: center;margin-top: 5px" dir="rtl" class="w3-container">
 			<?=$item['name']?><br>
                 <span class="w3-text-green"><?=$item['price']?> تومان</span>
             </p>

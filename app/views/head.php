@@ -36,6 +36,9 @@ elseif(isset($settings['title']))echo $settings['title'];else{?>MIM PHOTOGRAPHY<
 
 </style>
     <style>
+        .subpanel{
+            display: none;
+        }
         .xxx{
             cursor: pointer;
         }

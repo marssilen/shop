@@ -12,6 +12,9 @@ class Home_m extends Model
 	function get_slider(){
 	    return $this->db->select("select * from slider");
     }
+    function get_most_view(){
+	    return $this->db->select("select * from items ORDER BY `view` DESC LIMIT 15");
+    }
     function get_settings(){
         $data=$this->db->select("SELECT * from settings");
         if(!isset($data[0])){
@@ -29,7 +32,7 @@ class Home_m extends Model
         return $result;
     }
     function get_recent(){
-        $result=$this->db->select("SELECT * FROM items ORDER BY id DESC LIMIT 10");
+        $result=$this->db->select("SELECT * FROM items ORDER BY id DESC LIMIT 15");
         return $result;
     }
     function get_all_home_cat(){

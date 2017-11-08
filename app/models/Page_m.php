@@ -7,6 +7,10 @@ class Page_m extends Model
 	function get($id){
 		return $this->db->select("SELECT * FROM items WHERE id= :id",array('id' => $id));
 	}
+	function add_view($id,$view){
+	    echo $view++;
+        $this->db->update('items',array('view'=>$view),'id='.$id);
+    }
     function get_tags($id){
         $result=$this->db->select('select * from tag where itemid=:id',array('id'=>$id));
         return $result;

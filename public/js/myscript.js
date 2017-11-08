@@ -53,4 +53,15 @@ $(function (){
         }
     }
     slide();
+    $('.mnubtn').mouseenter(function (x) {
+        $(".subpanel").hide();
+        $("#sub"+this.id).show();
+    });
+    $('.subpanel').mouseleave(function (x) {
+        $(".subpanel").hide();
+    });
+    $('.myNavbar').mouseleave(function (x) {
+        $(".subpanel").hide();
+    });
+
 });

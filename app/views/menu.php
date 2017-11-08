@@ -28,26 +28,26 @@ $sub_menu=array();
     <div class="w3-right w3-hide-small">
 	  <?php foreach($menu_list as $menu){ ?>
         <?php if($menu['parent']=='0'){
-              $sub_menu[]=$this->model('Menu_m')->get_menu($menu['id']);
+              $sub_menu[]=array('id'=>$menu['id'],'ar'=>$this->model('Menu_m')->get_menu($menu['id']));
             ?>
-		<a href="<?=$menu['href']?>" class="w3-bar-item w3-button"><?= $menu['menu'] ?></a>
+		<a id="<?=$menu['id']?>"  href="<?=$menu['href']?>" class="mnubtn w3-bar-item w3-button w3-right"><?= $menu['menu'] ?></a>
         <?php } ?>
     <?php } ?>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <a href="javascript:void(0)" class="w3-bar-item w3-red w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
     <?php
     foreach($sub_menu as $menu){
     ?>
-    <div class="w3-brown w3-panel w3-hide">
-        <div style="display: inline-block">
-        <ul>
+    <div id="sub<?=$menu['id']?>" class="w3-dark-gray subpanel">
+        <div style="display: inline-block;padding: 15px">
+            <img src="<?=URL?>public/speaker.jpg" width="150" height="150" style="vertical-align: top">
+        <ul style="display: inline-block">
             <?php
-            foreach($menu as $item){
+            foreach($menu['ar'] as $item){
             ?>
             <li><a href="<?=$item['href']?>"><?=$item['menu']?></a></li>
             <?php } ?>

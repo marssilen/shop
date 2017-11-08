@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daa543f4-1317-469d-8627-258a56cdb11b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/team1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cp.php" afterPath="$PROJECT_DIR$/app/controllers/cp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home.php" afterPath="$PROJECT_DIR$/app/controllers/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/signup.php" afterPath="$PROJECT_DIR$/app/controllers/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/Upload.php" afterPath="$PROJECT_DIR$/app/libs/Upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/session.php" afterPath="$PROJECT_DIR$/app/libs/session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cp_m.php" afterPath="$PROJECT_DIR$/app/models/Cp_m.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/page.php" afterPath="$PROJECT_DIR$/app/controllers/page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Home_m.php" afterPath="$PROJECT_DIR$/app/models/Home_m.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Menu_m.php" afterPath="$PROJECT_DIR$/app/models/Menu_m.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cat/index.php" afterPath="$PROJECT_DIR$/app/views/cat/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cp/home_page.php" afterPath="$PROJECT_DIR$/app/views/cp/home_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cp/panel_master.php" afterPath="$PROJECT_DIR$/app/views/cp/panel_master.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cp/review_factor.php" afterPath="$PROJECT_DIR$/app/views/cp/review_factor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Page_m.php" afterPath="$PROJECT_DIR$/app/models/Page_m.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/head.php" afterPath="$PROJECT_DIR$/app/views/head.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.php" afterPath="$PROJECT_DIR$/app/views/home/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login/index.php" afterPath="$PROJECT_DIR$/app/views/login/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menu.php" afterPath="$PROJECT_DIR$/app/views/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/page/index.php" afterPath="$PROJECT_DIR$/app/views/page/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mycss.css" afterPath="$PROJECT_DIR$/public/css/mycss.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/myscript.js" afterPath="$PROJECT_DIR$/public/js/myscript.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,24 +33,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="cp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/cp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="369" column="77" lean-forward="false" selection-start-line="369" selection-start-column="77" selection-end-line="369" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="review_factor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/cp/review_factor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="1625">
               <caret line="65" column="153" lean-forward="false" selection-start-line="65" selection-start-column="153" selection-end-line="65" selection-end-column="153" />
-              <folding>
-                <marker date="1510080753274" expanded="true" signature="1836:1856" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,109 +46,119 @@
       <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+            <state relative-caret-position="83">
+              <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="39" selection-end-column="8" />
               <folding>
-                <element signature="e#3489#3495#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1510169938054" expanded="true" signature="1737:1779" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cp_m.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Cp_m.php">
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="103" column="76" lean-forward="false" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
+            <state relative-caret-position="225">
+              <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home_m.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Home_m.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="34" column="80" lean-forward="false" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
               <folding>
-                <marker date="1510080650112" expanded="true" signature="139:176" ph="select * fro... image" />
-                <marker date="1510080650112" expanded="true" signature="706:726" ph="select * fro... slider" />
-                <marker date="1510080650112" expanded="true" signature="787:817" ph="SELECT count... ${$table}" />
-                <marker date="1510080650112" expanded="true" signature="926:1154" ph="SELECT home_... home_page" />
-                <marker date="1510080650112" expanded="true" signature="1249:1271" ph="SELECT * FRO... category" />
-                <marker date="1510080650112" expanded="true" signature="1373:1407" ph="SELECT * FRO... home_cat" />
-                <marker date="1510080650112" expanded="true" signature="2278:2300" ph="SELECT * fro... settings" />
-                <marker date="1510080650112" expanded="true" signature="2509:2531" ph="SELECT * fro... settings" />
-                <marker date="1510080650112" expanded="true" signature="2847:2901" ph="SELECT id, n... items" />
-                <marker date="1510080650112" expanded="true" signature="3207:3252" ph="SELECT id FR... items" />
-                <marker date="1510080650112" expanded="true" signature="3683:3783" ph="select id,na... address" />
-                <marker date="1510080650112" expanded="true" signature="4062:4131" ph="select * fro... address" />
-                <marker date="1510080650112" expanded="true" signature="4202:4271" ph="select * fro... address" />
-                <marker date="1510080650112" expanded="true" signature="4399:4419" ph="SELECT id FR... items" />
-                <marker date="1510080650112" expanded="true" signature="4493:4538" ph="SELECT id FR... items" />
-                <marker date="1510080650112" expanded="true" signature="4641:4735" ph="SELECT id, n... items" />
-                <marker date="1510080650112" expanded="true" signature="4953:5046" ph="SELECT id,st... factors" />
-                <marker date="1510080650112" expanded="true" signature="5146:5303" ph="SELECT purch... purchased" />
-                <marker date="1510080650112" expanded="true" signature="5468:5555" ph="SELECT * FRO... factors" />
-                <marker date="1510080650112" expanded="true" signature="5710:6090" ph="SELECT facto... factors" />
-                <marker date="1510080650112" expanded="true" signature="6366:6384" ph="SELECT * FRO... menu" />
-                <marker date="1510080650112" expanded="true" signature="6943:6991" ph="SELECT num,p... purchased" />
-                <marker date="1510080650112" expanded="true" signature="7548:7590" ph="INSERT INTO `category`... " />
-                <marker date="1510080650112" expanded="true" signature="7632:7680" ph="SELECT id FR... category" />
-                <marker date="1510080650112" expanded="true" signature="7833:7908" ph="INSERT INTO `category`... " />
-                <marker date="1510080650112" expanded="true" signature="8018:8048" ph="DELETE FROM " />
-                <marker date="1510080650112" expanded="true" signature="8143:8218" ph="UPDATE `cate... " />
-                <marker date="1510080650112" expanded="true" signature="8316:8348" ph="SELECT * FRO... category" />
-                <marker date="1510080650112" expanded="true" signature="8486:8505" ph="SELECT * FRO... items" />
-                <marker date="1510080650112" expanded="true" signature="8696:8732" ph="SELECT * FRO... category" />
-                <marker date="1510080650112" expanded="true" signature="9909:9945" ph="SELECT * FRO... factors" />
-                <marker date="1510080650112" expanded="true" signature="10038:10074" ph="SELECT * FRO... comments" />
-                <marker date="1510080650112" expanded="true" signature="10377:10423" ph="SELECT id, u... userlist" />
-                <marker date="1510080650112" expanded="true" signature="10631:10667" ph="SELECT * FRO... userlist" />
-                <marker date="1510080650112" expanded="true" signature="10883:10923" ph="SELECT * FRO... profile" />
-                <marker date="1510080650112" expanded="true" signature="11039:11155" ph="SELECT items... favorites" />
-                <marker date="1510080650112" expanded="true" signature="11265:11306" ph="SELECT * FRO... comments" />
-                <marker date="1510080650112" expanded="true" signature="11422:11469" ph="SELECT * FRO... comments" />
+                <marker date="1510168880272" expanded="true" signature="109:128" ph="SELECT * FRO... items" />
+                <marker date="1510168880272" expanded="true" signature="224:244" ph="select * fro... slider" />
+                <marker date="1510168880272" expanded="true" signature="315:364" ph="select * fro... items" />
+                <marker date="1510168880272" expanded="true" signature="436:458" ph="SELECT * fro... settings" />
+                <marker date="1510168880272" expanded="true" signature="708:806" ph="SELECT * FRO... home_page" />
+                <marker date="1510168880272" expanded="true" signature="903:1001" ph="SELECT * FRO... home_page" />
+                <marker date="1510168880272" expanded="true" signature="1097:1141" ph="SELECT * FRO... items" />
+                <marker date="1510168880272" expanded="true" signature="1097:1142" ph="SELECT * FRO... items" />
+                <marker date="1510168880272" expanded="true" signature="1244:1278" ph="SELECT * FRO... home_cat" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/signup.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="156">
+              <caret line="100" column="61" lean-forward="false" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
+              <folding>
+                <marker date="1510169606583" expanded="true" signature="6446:6514" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="6579:6647" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="6761:6874" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="6840:6874" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="6905:7021" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="7255:7311" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="7571:7639" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="7704:7772" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="7883:8004" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="7961:8004" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8105:8134" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8105:8229" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8186:8229" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8353:8387" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8623:8691" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8756:8824" ph="..." />
+                <marker date="1510169606583" expanded="true" signature="8941:9047" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tag.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/tag.php">
+      <file leaf-file-name="Page_m.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Page_m.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="250">
+              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding>
+                <marker date="1510167704555" expanded="true" signature="136:169" ph="SELECT * FRO... items" />
+                <marker date="1510167704555" expanded="true" signature="381:415" ph="select * fro... tag" />
+                <marker date="1510167704555" expanded="true" signature="671:724" ph="SELECT num F... purchased" />
+                <marker date="1510167704555" expanded="true" signature="909:951" ph="select * fro... image" />
+                <marker date="1510167704555" expanded="true" signature="1082:1146" ph="SELECT * FRO... favorites" />
+                <marker date="1510167704555" expanded="true" signature="1237:1271" ph="SELECT id FR... items" />
+                <marker date="1510167704555" expanded="true" signature="1591:1641" ph="SELECT price... items" />
+                <marker date="1510167704555" expanded="true" signature="1717:1798" ph="SELECT * FRO... purchased" />
+                <marker date="1510167704555" expanded="true" signature="1933:1979" ph="UPDATE purch... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_item.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/edit_item.php">
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="panel_master.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cp/panel_master.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="94" column="84" lean-forward="false" selection-start-line="94" selection-start-column="84" selection-end-line="94" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_address.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cp/my_address.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="175">
+              <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -176,16 +168,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>remove_f</find>
-      <find>remove_from_list</find>
-      <find>query</find>
-      <find>factor_s</find>
-      <find>no</find>
-      <find>add_add</find>
       <find>URL</find>
       <find>footer</find>
       <find>my</find>
-      <find>scroll</find>
       <find>max</find>
       <find>.scr</find>
       <find>.img</find>
@@ -206,6 +191,13 @@
       <find>address</find>
       <find>factor_re</find>
       <find>get_add</find>
+      <find>im</find>
+      <find>order</find>
+      <find>get_all_card</find>
+      <find>most</find>
+      <find>slide</find>
+      <find>scroll</find>
+      <find>small</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,35 +216,35 @@
         <option value="$PROJECT_DIR$/app/config/path.php" />
         <option value="$PROJECT_DIR$/app/views/cp/index.php" />
         <option value="$PROJECT_DIR$/app/views/cp/files.php" />
-        <option value="$PROJECT_DIR$/app/controllers/page.php" />
-        <option value="$PROJECT_DIR$/app/models/Page_m.php" />
         <option value="$PROJECT_DIR$/app/views/cp/show_factor.php" />
         <option value="$PROJECT_DIR$/app/views/cp/address_add.php" />
         <option value="$PROJECT_DIR$/public/js/header.js.php" />
         <option value="$PROJECT_DIR$/app/views/tag/index.php" />
-        <option value="$PROJECT_DIR$/app/views/head.php" />
         <option value="$PROJECT_DIR$/app/views/footer.php" />
-        <option value="$PROJECT_DIR$/public/js/myscript.js" />
         <option value="$PROJECT_DIR$/public/css/w3.css" />
         <option value="$PROJECT_DIR$/app/views/cat/index.php" />
-        <option value="$PROJECT_DIR$/public/css/mycss.css" />
         <option value="$PROJECT_DIR$/app/views/edit_item/index.php" />
         <option value="$PROJECT_DIR$/app/views/page/index.php" />
-        <option value="$PROJECT_DIR$/app/models/Home_m.php" />
-        <option value="$PROJECT_DIR$/app/controllers/home.php" />
         <option value="$PROJECT_DIR$/app/views/cp/home_page.php" />
         <option value="$PROJECT_DIR$/app/libs/Upload.php" />
-        <option value="$PROJECT_DIR$/app/models/Menu_m.php" />
         <option value="$PROJECT_DIR$/app/models/Signup_m.php" />
         <option value="$PROJECT_DIR$/app/controllers/signup.php" />
         <option value="$PROJECT_DIR$/app/libs/session.php" />
         <option value="$PROJECT_DIR$/app/views/signup/index.php" />
         <option value="$PROJECT_DIR$/app/views/login/index.php" />
-        <option value="$PROJECT_DIR$/app/views/home/index.php" />
         <option value="$PROJECT_DIR$/app/views/cp/panel_master.php" />
         <option value="$PROJECT_DIR$/app/controllers/cp.php" />
         <option value="$PROJECT_DIR$/app/models/Cp_m.php" />
         <option value="$PROJECT_DIR$/app/views/cp/review_factor.php" />
+        <option value="$PROJECT_DIR$/public/js/myscript.js" />
+        <option value="$PROJECT_DIR$/app/models/Menu_m.php" />
+        <option value="$PROJECT_DIR$/app/views/head.php" />
+        <option value="$PROJECT_DIR$/app/controllers/page.php" />
+        <option value="$PROJECT_DIR$/app/models/Page_m.php" />
+        <option value="$PROJECT_DIR$/app/controllers/home.php" />
+        <option value="$PROJECT_DIR$/app/models/Home_m.php" />
+        <option value="$PROJECT_DIR$/app/views/home/index.php" />
+        <option value="$PROJECT_DIR$/public/css/mycss.css" />
         <option value="$PROJECT_DIR$/app/views/menu.php" />
       </list>
     </option>
@@ -288,6 +280,307 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="css">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="signup">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="login">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="home">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="edit_item">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cp">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="libs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controllers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="shop">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="config">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -592,307 +885,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="public">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="public">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="js">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="public">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="css">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="signup">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="login">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="home">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="edit_item">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="cp">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="cat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="models">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="libs">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="controllers">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="shop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="config">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1023,11 +1015,13 @@
       <workItem from="1509957102792" duration="729000" />
       <workItem from="1509973335263" duration="6923000" />
       <workItem from="1509989867025" duration="9149000" />
+      <workItem from="1510158051430" duration="4128000" />
+      <workItem from="1510166836817" duration="3121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113000000" />
+    <option name="totallyTimeSpent" value="120249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1105,13 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Page_m.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cp/address_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2900">
@@ -1182,24 +1169,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/myscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/j.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1224,53 +1197,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Home_m.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <marker date="1509974298726" expanded="true" signature="109:128" ph="SELECT * FRO... items" />
-            <marker date="1509974298726" expanded="true" signature="224:244" ph="select * fro... slider" />
-            <marker date="1509974298726" expanded="true" signature="316:338" ph="SELECT * fro... settings" />
-            <marker date="1509974298726" expanded="true" signature="588:686" ph="SELECT * FRO... home_page" />
-            <marker date="1509974298726" expanded="true" signature="783:881" ph="SELECT * FRO... home_page" />
-            <marker date="1509974298726" expanded="true" signature="977:1022" ph="SELECT * FRO... items" />
-            <marker date="1509974298726" expanded="true" signature="1124:1158" ph="SELECT * FRO... home_cat" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="182" column="15" lean-forward="false" selection-start-line="182" selection-start-column="15" selection-end-line="182" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/Upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3925">
           <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/w3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="142" column="31" lean-forward="false" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Menu_m.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="86" lean-forward="false" selection-start-line="7" selection-start-column="86" selection-end-line="7" selection-end-column="86" />
-          <folding>
-            <marker date="1510066318829" expanded="true" signature="261:296" ph="SELECT * FRO... menu" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,9 +1251,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,23 +1271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1384,7 +1297,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cp/my_address.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1400,7 +1313,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cp/panel_master.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="2350">
           <caret line="94" column="84" lean-forward="false" selection-start-line="94" selection-start-column="84" selection-end-line="94" selection-end-column="84" />
           <folding />
         </state>
@@ -1408,16 +1321,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/cp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
+        <state relative-caret-position="9225">
           <caret line="369" column="77" lean-forward="false" selection-start-line="369" selection-start-column="77" selection-end-line="369" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cp/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cat/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/myscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="64" column="7" lean-forward="false" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Menu_m.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding>
+            <marker date="1510066318829" expanded="true" signature="261:296" ph="SELECT * FRO... menu" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cp/review_factor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1625">
+          <caret line="65" column="153" lean-forward="false" selection-start-line="65" selection-start-column="153" selection-end-line="65" selection-end-column="153" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Page_m.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <marker date="1510167704555" expanded="true" signature="136:169" ph="SELECT * FRO... items" />
+            <marker date="1510167704555" expanded="true" signature="381:415" ph="select * fro... tag" />
+            <marker date="1510167704555" expanded="true" signature="671:724" ph="SELECT num F... purchased" />
+            <marker date="1510167704555" expanded="true" signature="909:951" ph="select * fro... image" />
+            <marker date="1510167704555" expanded="true" signature="1082:1146" ph="SELECT * FRO... favorites" />
+            <marker date="1510167704555" expanded="true" signature="1237:1271" ph="SELECT id FR... items" />
+            <marker date="1510167704555" expanded="true" signature="1591:1641" ph="SELECT price... items" />
+            <marker date="1510167704555" expanded="true" signature="1717:1798" ph="SELECT * FRO... purchased" />
+            <marker date="1510167704555" expanded="true" signature="1933:1979" ph="UPDATE purch... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Cp_m.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="103" column="76" lean-forward="false" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
+        <state relative-caret-position="268">
+          <caret line="208" column="54" lean-forward="false" selection-start-line="208" selection-start-column="30" selection-end-line="208" selection-end-column="54" />
           <folding>
             <marker date="1510080650112" expanded="true" signature="139:176" ph="select * fro... image" />
             <marker date="1510080650112" expanded="true" signature="706:726" ph="select * fro... slider" />
@@ -1461,48 +1441,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cp/review_factor.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="65" column="153" lean-forward="false" selection-start-line="65" selection-start-column="153" selection-end-line="65" selection-end-column="153" />
+        <state relative-caret-position="175">
+          <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Home_m.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="34" column="80" lean-forward="false" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
           <folding>
-            <marker date="1510080753274" expanded="true" signature="1836:1856" ph="..." />
+            <marker date="1510168880272" expanded="true" signature="109:128" ph="SELECT * FRO... items" />
+            <marker date="1510168880272" expanded="true" signature="224:244" ph="select * fro... slider" />
+            <marker date="1510168880272" expanded="true" signature="315:364" ph="select * fro... items" />
+            <marker date="1510168880272" expanded="true" signature="436:458" ph="SELECT * fro... settings" />
+            <marker date="1510168880272" expanded="true" signature="708:806" ph="SELECT * FRO... home_page" />
+            <marker date="1510168880272" expanded="true" signature="903:1001" ph="SELECT * FRO... home_page" />
+            <marker date="1510168880272" expanded="true" signature="1097:1141" ph="SELECT * FRO... items" />
+            <marker date="1510168880272" expanded="true" signature="1097:1142" ph="SELECT * FRO... items" />
+            <marker date="1510168880272" expanded="true" signature="1244:1278" ph="SELECT * FRO... home_cat" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="73" lean-forward="false" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4650">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cp/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="156">
+          <caret line="100" column="61" lean-forward="false" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1510169606583" expanded="true" signature="6446:6514" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="6579:6647" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="6761:6874" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="6840:6874" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="6905:7021" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="7255:7311" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="7571:7639" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="7704:7772" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="7883:8004" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="7961:8004" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8105:8134" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8105:8229" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8186:8229" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8353:8387" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8623:8691" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8756:8824" ph="..." />
+            <marker date="1510169606583" expanded="true" signature="8941:9047" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cat/index.php">
+    <entry file="file://$PROJECT_DIR$/public/css/w3.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="268">
+          <caret line="87" column="87" lean-forward="false" selection-start-line="87" selection-start-column="77" selection-end-line="87" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/mycss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="68" column="36" lean-forward="false" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+        <state relative-caret-position="83">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="39" selection-end-column="8" />
           <folding>
-            <element signature="e#3489#3495#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1510169938054" expanded="true" signature="1737:1779" ph="..." />
           </folding>
         </state>
       </provider>
