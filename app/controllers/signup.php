@@ -12,21 +12,21 @@ class Signup extends Controller
 //			exit;
 //		}*/
 //	}
-	public function index($name='')
+	public function index()
 	{
-//		if(isset($_POST['submit'])){
-//                     if($_POST['username']!=NULL and $_POST['pass']!=NULL)
-//                        if($_POST['pass']==$_POST['retype']){
-//			$this->formModel->userInsert($_POST['username'],sha1($_POST['pass']),$_POST['email'],$_POST['phone']);
-//                        echo 'Activation link was sent to '.htmlentities($_POST['email']);
-//
-//                        }else{
-//                            echo 'passwords do not match';
-//                        }
-//
-//                }
-//
-//
+		if(isset($_POST['submit'])){
+                     if($_POST['uname']!=NULL and $_POST['pass1']!=NULL)
+                        if($_POST['pass1']==$_POST['pass2']){
+            			if($this->formModel->userInsert(strtolower($_POST['uname']),sha1($_POST['pass1']),$_POST['email'],$_POST['phone'])){
+                            $this->view('signup/welcome');
+                        }else{
+                            $this->view('signup/username');
+                        }
+//                            $this->view('signup/email');
+                        }else{
+                            $this->view('signup/password');
+                        }
+                }
 		$this->view('signup/index',$_POST);
 	}
         public function active_email($key=''){

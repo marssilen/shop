@@ -1,7 +1,7 @@
 <?php
 class Login extends Controller
 {
-	public function index($name='')
+	public function index()
 	{
 		$this->view('login/index');
 	}
@@ -18,7 +18,8 @@ class Login extends Controller
 		if($this->formModel->signin($username,$password)){
             header('location: '.URL.'cp/');
 		}else{
-            header('location: '.URL);
+            $this->view('login/fail');
+//            header('location: '.URL);
 		}
 	}
 }

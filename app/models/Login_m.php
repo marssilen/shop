@@ -15,7 +15,7 @@ class Login_m extends Model
 	}
 	public function userInsert($username,$password){
 		$username=strtolower($username);
-		$this->db->insert('userlist',array('username'=>$username,'password'=>sha1($password)));
+		$this->db->insert('userlist',array('username'=>strtolower($username),'password'=>sha1($password)));
 	}
 	public function signin($username,$password){
 			//  echo hash('sha256',$timestamp);

@@ -9,6 +9,17 @@
 /*.tabs .tabItem.last{border-left:0;width:90px}*/
 /*.tabs .sep{padding:0 2px}*/
 /*.tabs-list{overflow:hidden;position:relative;width:380px}*/
+#btnSearch {
+    top: 0;
+    left: 0px;
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #b5b5b5;
+    background: url("http://localhost/shop/public/slices.png") no-repeat -445px -22px #9da3b1;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
 .link:hover {
   color: black;
 }
@@ -62,6 +73,9 @@ tr:nth-child(odd){background-color: #f2f2f2}
 .title{
     font-size:large;
     text-align: center;
+}
+.subpanel{
+    display: none;
 }
 /*scroll panel*/
 @media (max-width:600px) {

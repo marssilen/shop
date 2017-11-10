@@ -219,28 +219,6 @@
             </button >
         </div>
     </div>
-    <div class="container" style="margin-top: 10px">
-        <?php
-        foreach($data['data'] as $card){?>
-            <form action="" method="post">
-                            <button class="btn" type="submit" name="change">تغییر</button>
-                            <select name="cat">
-                                <?php foreach ($data['items'] as $item){ ?>
-                                <option <?php if($card['url_cat']==$item['id']) echo 'selected'; ?> value="<?=$item['id']?>"><?= $item['name']?></option>
-                                <?php } ?>
-                            </select>
-                            <button class="btn w3-red" type="submit" name="delete">حذف</button>
-                            <a onclick="document.getElementById('add_card_image_modal').style.display='block';document.getElementById('id').value='<?=$card['id']?>'" class="btn w3-yellow">عکس</a>
-<!--                            <select name="show_type" id="show_type">-->
-<!--                                <option --><?php //if($card['card']=='0') echo 'selected'; ?><!-- value="0">خیر</option>-->
-<!--                                <option --><?php //if($card['card']=='1') echo 'selected'; ?><!-- value="1">بلی</option>-->
-<!--                            </select>-->
-            </form>
-
-            <?php
-        }
-        ?>
-    </div>
 </div>
 
 <div id="add_card_image_modal" class="w3-modal">

@@ -2,11 +2,24 @@
 $menu_list=$this->model('Menu_m')->get_menu();
 $sub_menu=array();
 ?>
+<div id="loginbox" class="w3-modal w3-animate-opacity" style="display: none">
+    <div class="w3-modal-content w3-round w3-container" style="opacity: 0.9">
+        <form action="<?=URL?>login/run/" method="post">
+            <input class="w3-input" name="username" placeholder="نام کاربری">
+            <input class="w3-input" name="password" placeholder="رمز عبور">
+            <div class="w3-margin-top w3-margin-bottom">
+                <input type="submit" value="وارد شوید" class="w3-round w3-white w3-border w3-hover-gray w3-padding-8">
+                <button onclick="document.getElementById('loginbox').style.display='none';return false;" class="w3-round w3-white w3-border w3-hover-gray w3-padding-8">انصراف</button>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="w3-top">
 <div class="w3-bar w3-white w3-card-2" id="myNavbar">
-    <div class="w3-right w3-panel" style="display: block">
+    <div style="position: relative" class="w3-">
+    <div class="w3-right" style="display: block">
     <?php if(!$this->is_login){ ?>
-        <a href="<?= URL ?>login" style="padding: 10px">وارد شوید</a>
+        <a href="<?= LINK ?>" style="padding: 10px" onclick="document.getElementById('loginbox').style.display='block';">وارد شوید</a>
         <a href="<?= URL ?>signup/"> ثبت نام</a>
     <?php }else{
         $m=$this->model('Page_m');
@@ -16,16 +29,19 @@ $sub_menu=array();
         <a href="<?= URL ?>cp/logout/"> خروج</a>
     <?php } ?>
     </div>
-    <div class="center w3-margin-top container w3-yellow w3-center">
-        <form>
-            <button class="w3-btn w3-green">shoping<i class="w3-badge w3-blue">12</i> </button>
-            <input class="w3-border w3-border-blue" style="display: inline-block;width: 80%;margin: 0px">
-            <button class="w3-rest btn btn-success" style="display: inline-block;margin: 0px">search</button>
+
+        <a href="<?=URL?>" class="" style="position: absolute;left: 10px;top: 0px"><img src="<?=URL?>public/logo.jpg" height="36"></a>
+        <form style="position: relative" class="center w3-margin-top container w3-center">
+<!--            <button class="w3-btn w3-green w3-round">سبد خرید <span class="w3-badge w3-grey">12</span> </button>-->
+            <input placeholder="جستجو" class="w3-border w3-border-gray w3-round" style="padding-right: 10px;position: absolute;width: 100%;margin: 0px;left: 0px;height: 36px">
+<!--            <input class="w3-border w3-border-blue" style="display: inline-block;width: 80%;margin: 0px">-->
+<!--            <button class="w3-rest w3-btn w3-green w3-round" style="padding:2px;padding-left:10px;padding-right:10px;margin: 0px">-->
+<!--                <span class="w3-text-light-grey glyphicon glyphicon-search"></span></button>-->
+            <button id="btnSearch"></button>
         </form>
     </div>
-    <a href="<?=URL?>" class="w3-bar-item w3-button w3-wide"><img src="<?=URL?>public/logo.jpg" height="30"></a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right w3-hide-small w3-margin-top w3-light-gray" style="display: block;width: 100%">
 	  <?php foreach($menu_list as $menu){ ?>
         <?php if($menu['parent']=='0'){
               $sub_menu[]=array('id'=>$menu['id'],'ar'=>$this->model('Menu_m')->get_menu($menu['id']));
@@ -64,7 +80,7 @@ $sub_menu=array();
         <?php } ?>
     <?php } ?>
         <?php if(!$this->is_login){ ?>
-			<a href="<?= URL ?>login" onclick="w3_close()" class="w3-bar-item w3-button">وارد شوید</a>
+			<a href="<?= URL ?>login" onclick="document.getElementById('loginbox').style.display='block';return false;" class="w3-bar-item w3-button">وارد شوید</a>
         <?php }else{
             $m=$this->model('Page_m');
             $fid=$m->get_factor(Session::get('id'));
