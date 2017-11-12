@@ -199,6 +199,10 @@ function show_cat($id=0){
 		$this->formModel->add_cat2($_POST['pa_cat'],$_POST['cat']);
 		}
 		$data=$this->formModel->ss($id);
+		if($data=='<ul></ul>'){
+            $this->formModel->add_cat2('0','main');
+            $data=$this->formModel->ss($id);
+        }
 		$this->view('cp/cat',$data,true);
 }
 }
@@ -236,26 +240,26 @@ $this->view('cp/address_detail',$data);
         $this->view('cp/settings',$data,true);
     }
 function menu(){
-$req=array('id','menu','parent','href','submit');
-if(form::check($_POST, $req,TRUE)){
-if(form::check_type('isiss',$_POST)){
-$this->formModel->change_menu($_POST);
-}
-}
-$insert=array('id','submit');
-if(form::check($_POST, $insert,TRUE)){
-if(form::check_type('is',$_POST)){
-$this->formModel->remove_menu($_POST['id']);
-}
-}
-$insert=array('submit');
-if(form::check($_POST, $insert,TRUE)){
-if(form::check_type('s',$_POST)){
-$this->formModel->add_menu();
-}
-}
-$data=$this->formModel->get_menu();
-$this->view('cp/menu',$data,true);
+    $req=array('id','menu','parent','href','submit');
+    if(form::check($_POST, $req,TRUE)){
+        if(form::check_type('isiss',$_POST)){
+            $this->formModel->change_menu($_POST);
+        }
+    }
+    $insert=array('id','submit');
+    if(form::check($_POST, $insert,TRUE)){
+        if(form::check_type('is',$_POST)){
+            $this->formModel->remove_menu($_POST['id']);
+        }
+    }
+    $insert=array('submit');
+    if(form::check($_POST, $insert,TRUE)){
+        if(form::check_type('s',$_POST)){
+            $this->formModel->add_menu();
+        }
+    }
+    $data=$this->formModel->get_menu();
+    $this->view('cp/menu',$data,true);
 }
 function get_users($page=1){
 $page=(int)$page;

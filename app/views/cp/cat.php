@@ -5,7 +5,7 @@ function ale(){
 }
     $('li[pa=""],li[pa="0"]').last().each(function(e) {
 		var pa=$(this).attr('pa');
-		$(this).after('<li id="a"><form id="z" action="" method="post" style="">'+'<input type="hidden" name="pa" value="'+pa+'">'+'<input name="cat" type="text" placeholder="گروه اصلی"><button style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-blue w3-btn w3-round" name="add_row" class="add">افزودن</button></form></li>');
+		$(this).after('<li id="a"><form id="z" action="" method="post" style="">'+'<input type="hidden" name="pa" value="'+pa+'">'+'<input name="cat" type="text" class="w3-padding w3-round w3-border" placeholder="گروه اصلی"><button style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-blue w3-btn w3-round" name="add_row" class="add">افزودن</button></form></li>');
     });
 	
 	

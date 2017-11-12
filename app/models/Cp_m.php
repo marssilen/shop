@@ -1,7 +1,7 @@
 <?php
 class Cp_m extends Model
 {
-
+    protected $cat_child=array();
 function __construct(){
 parent::__construct();
 }
@@ -219,9 +219,28 @@ $id=$result->fetch();
 return $id['id'];
 }
 function delete_cat($id){
-$sql="DELETE FROM category WHERE id=$id";
-$result=$this->db->query($sql);
-return $result;
+//    echo '<pre>';
+    $children=array_filter($this->get_child($id));
+//    print_r($children);
+    foreach ($children as $child){
+        foreach ($child as $grand) {
+//            print($grand['id'].' ');
+            $sql="DELETE FROM category WHERE id=".$grand['id'];
+            $this->db->query($sql);
+        }
+    }
+    $sql="DELETE FROM category WHERE id=".$id;
+    $this->db->query($sql);
+//return $result;
+}
+function get_child($id){
+    $result=$this->db->select('select id from category WHERE pa_cat=:parent',array('parent'=>$id));
+
+    foreach ($result as $ch){
+        $this->get_child($ch['id']);
+    }
+    $this->cat_child[]=$result;
+    return $this->cat_child;
 }
 function edit_cat($id,$cat,$pa){
 $sql="UPDATE `category` SET
@@ -255,7 +274,7 @@ $this->arr[]=$row;
 
 $this->stream.='<li pa="'.$row['pa_cat'].'" li_id="'.$row['id'].'">';
 //echo '<li pa="'.$row['pa_cat'].'" li_id="'.$row['id'].'">';
-$this->stream.='<a type="button" style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-blue w3-btn w3-round" href="edit_cat/'.$row['id'].'">'.$row['cat'].'</a>'.'<a style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-red w3-btn w3-round" href="delete_cat/'.$row['id'].'"> حذف</a> <a href="" style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-green w3-btn w3-round" data-toggle="modal" data-target="#myModal" pa="'.$row['id'].'">+</a>';
+$this->stream.='<a type="button" style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-blue w3-btn w3-round" href="'.URL.'cat/'.$row['id'].'">'.$row['cat'].'</a>'.'<a type="button" style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-yellow w3-btn w3-round" href="edit_cat/'.$row['id'].'">ویرایش</a>'.'<a style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-red w3-btn w3-round" href="delete_cat/'.$row['id'].'"> حذف</a> <a href="" style="margin: 5px;padding: 1px 15px 1px 15px" class="add_list_a w3-green w3-btn w3-round" data-toggle="modal" data-target="#myModal" pa="'.$row['id'].'">+</a>';
 //echo $row['cat'].' <a href="" class="add_list_a" data-toggle="modal" data-target="#myModal" pa="'.$row['id'].'">+</a>';
 $this->find_cat_children($row['id']);
 
