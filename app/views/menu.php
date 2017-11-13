@@ -14,6 +14,14 @@ $sub_menu=array();
         </form>
     </div>
 </div>
+<div id="msg" class="w3-modal w3-animate-opacity" style="display: none">
+    <div class="w3-modal-content w3-round w3-container w3-panel w3-teal w3-display-container" style="opacity: 0.9">
+  <span onclick="this.parentElement.parentElement.style.display='none'" class="w3-button w3-red w3-large w3-display-topright">&times;</span>
+            <h3 class="w3-center">پیام</h3>
+            <p class="w3-center" id="message">اضافه شد</p>
+
+    </div>
+</div>
 <div class="w3-top">
 <div class="w3-bar w3-white w3-card-2" id="myNavbar">
     <div style="position: relative" class="w3-">

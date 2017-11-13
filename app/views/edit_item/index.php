@@ -199,8 +199,8 @@ foreach($this->cats as $option){
 <div id="add_image_modal" class="w3-modal">
   <div class="w3-modal-content w3-container w3-round">
     <header class="w3-white">
-      <span onclick="document.getElementById('add_image_modal').style.display='none'"
-      class="w3-closebtn">&times;</span>
+      <span onclick="document.getElementById('add_image_modal').style.display='none';"
+      class="w3-closebtn" style="cursor:pointer">&times;</span>
     </header>
       <div class="w3-center">
       <p>آپلود تصویر</p>

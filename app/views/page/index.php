@@ -15,7 +15,7 @@ require_once('app/views/head.php');
 <!--    </div>-->
 <!--    ////////////////////////-->
     <div class="w3-col m8 s12" style="position: relative">
-        <div id="zoom_div" class="w3-card-2" style="position: absolute;display: none">
+        <div id="zoom_div" class="w3-card-2" style="position: absolute;display: none;z-index: 1">
             <div style="position: relative;width: 100%;height: 100%;overflow: hidden" dir="ltr">
                 <img id="zoom_image" style="position: absolute;left: 0px;top:0px;" src="<?= URL.'public/upload/'.$data['data']['card_image']?>">
             </div>
@@ -47,13 +47,14 @@ require_once('app/views/head.php');
                 <input type="hidden" name="id" value="<?= $data['data']['id'] ?>"/><?= $data['data']['id'] ?>
 
             </form>
-            <button id="buy_btn" class="w3-btn w3-green" type="submit" name="submit" >افزودن به سبد خرید</button>
+            <button id="buy_btn" class="w3-btn w3-green w3-round" style="position: relative" type="submit" name="submit"><i id="shop_btn"></i>افزودن به سبد خرید</button>
         </div>
     </div>
     <div class="w3-col s12 m4 w3-center" >
         <div style="" class=" w3-margin-32 w3-padding-16" id="columnOne">
-            <p style="text-align: left">
-                <a href="javascript:void(0)" id="fav_btn"><i class="w3-xlarge fa fa-heart-o"></i></a>
+            <p style="text-align: left;margin-left: 15px">
+                <a href="javascript:void(0)" id="fav_btn"></a>
+                <a id="share_btn" href="https://telegram.me/share/url?url=<?=URL.'page/'.$data['data']['id'].'&text='.$data['data']['name']?>"></a>
             </p>
             <div class="w3-center"><img id="card_image" style="width: 100%" src="<?= URL.'public/upload/'.$data['data']['card_image']?>"/></div>
             <div class=" w3-padding-8" style="margin-top:20px">
