@@ -90,9 +90,9 @@ class Edit_item_m extends Model
 		}
 
 	}
-	function change_price($id,$old_price,$price){
+	function change_price($id,$price){
 
-		  $sql="UPDATE items SET old_price='$old_price', price='$price' WHERE id=$id";
+		  $sql="UPDATE items SET price='$price' WHERE id=$id";
 		  $result=$this->db->query($sql);
 		  return $result->rowCount();
 

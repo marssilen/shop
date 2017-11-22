@@ -7,13 +7,6 @@ require_once('app/views/head.php');
 <?php require_once('app/views/menu.php'); ?>
     <div id="content">
 <div class="container w3-row w3-card-2" style="margin-top: 75px;margin-bottom:50px;padding: 50px">
-<!--    <div id="match1" class="w3-col m4 s12 pad">-->
-<!--        <img id="imgmatch" style="width:100%" src="--><?php // URL.'public/upload/'.$data['data']['card_image']?><!--"/>-->
-<!--    </div>-->
-<!--    w3-col m8 s12-->
-<!--    <div id="match2" class="pad" style="padding: 14px">-->
-<!--    </div>-->
-<!--    ////////////////////////-->
     <div class="w3-col m8 s12" style="position: relative">
         <div id="zoom_div" class="w3-card-2" style="position: absolute;display: none;z-index: 1">
             <div style="position: relative;width: 100%;height: 100%;overflow: hidden" dir="ltr">
@@ -34,20 +27,6 @@ require_once('app/views/head.php');
                     <a href="<?=URL.'tag/&tag='.$tag['tag']?>"><span class="tag"><?= $tag['tag']?></span></a>
                 <?php } ?>
             </div>
-            <form id="form" method="post" enctype="multipart/form-data">
-                <p class="price1">
-                    قیمت  :
-                    <?php if(Session::get('role')=='couser'){?>
-                        <?= $data['data']['old_price'] ?>
-                        <br><del><?= $data['data']['price'] ?></del>
-                    <?php }else{?>
-                        <?= $data['data']['price'] ?>
-                    <?php } ?>
-                </p>
-                <input type="hidden" name="id" value="<?= $data['data']['id'] ?>"/><?= $data['data']['id'] ?>
-
-            </form>
-            <button id="buy_btn" class="w3-btn w3-green w3-round" style="position: relative" type="submit" name="submit"><i id="shop_btn"></i>افزودن به سبد خرید</button>
         </div>
     </div>
     <div class="w3-col s12 m4 w3-center" >
@@ -64,6 +43,19 @@ require_once('app/views/head.php');
                     <img onclick="show_modal('<?= URL.'public/upload/'.$image['image']?>')" src="<?= URL.'public/upload/'.$image['image_thumb']?>" class="w3-hover-opacity" width="50" height="50" />
                 <?php } ?>
             </div>
+            <form id="form" method="post" enctype="multipart/form-data">
+                <p class="price-sec">قیمت:
+                    <?php if(Session::get('role')=='couser'){?>
+                        <?= $data['data']['old_price'] ?>
+                        <br><del><?= $data['data']['price'] ?></del>
+                    <?php }else{?>
+                        <?= $data['data']['price'] ?>
+                    <?php } ?>
+                    <span style="font-size: 16px">تومان</span>
+                </p>
+                <input type="hidden" name="id" value="<?= $data['data']['id'] ?>"/>
+            </form>
+            <button id="buy_btn" class="w3-btn w3-green w3-round" style="position: relative" type="submit" name="submit"><i id="shop_btn"></i>افزودن به سبد خرید</button>
         </div>
 
     </div>
@@ -72,15 +64,6 @@ require_once('app/views/head.php');
 <?php
 require_once ('app/views/footer.php');
 ?>
-<script>
-//    var imgheight=$("#imgmatch").height();
-//    var m1height=$("#match2").innerHeight();
-//    if(imgheight>m1height) {
-//        $("#match2").innerHeight(imgheight);
-//    }else{
-//        $("#match1").innerHeight(m1height);
-//    }
-</script>
 </div>
 </body>
 </html>

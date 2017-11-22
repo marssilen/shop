@@ -18,7 +18,7 @@
 <script src="<?= display(URL) ?>public/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="<?= display(URL) ?>public/js/myscript.js"></script>
 <!-- AngularJS -->
-<script src="<?= display(URL) ?>public/js/angular.min.js"></script>
+<!--<script src="--><?//= display(URL) ?><!--public/js/angular.min.js"></script>-->
 <style>
 body{
     text-align: right;
@@ -81,7 +81,6 @@ $('.mother').click(function(e) {
                 <a class="mother" href="#">کاربران <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul id="sectionTwoLinks">
                     <li><a href="<?= display(URL) ?>cp/get_users/"><span class="glyphicon glyphicon-user"></span> لیست کاربران</a></li>
-                    <li><a href="<?= display(URL) ?>cp/get_users/"><span class="glyphicon glyphicon-user"></span>همکار تایید نشده</a> <span class="w3-badge w3-blue">12</span> </li>
                 </ul>
             </li>
             <?php } ?>

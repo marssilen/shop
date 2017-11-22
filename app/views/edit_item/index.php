@@ -151,10 +151,7 @@ foreach($this->cats as $option){
     <div class="w3-card-2 w3-round">
         <form method="post" enctype="multipart/form-data" action="change_price/<?php echo $data['data']['id'] ?>">
             <div class="w3-container w3-padding-16">
-                <label class="w3-label w3-text-blue"><b>قیمت اصلی</b></label>
-                <input class="w3-input w3-border w3-round" type="text" name="old_price"  value="<?php echo $data['data']['old_price'] ?>">
-
-                <label class="w3-label w3-text-blue"><b>قیمت با تخفیف</b></label>
+                <label class="w3-label w3-text-blue"><b>قیمت</b></label>
                 <input class="w3-input w3-border w3-round" type="text" name="price"  value="<?php echo $data['data']['price'] ?>">
             </div>
             <button type="submit" name="change_price" style="margin-top:15px;" class="w3-btn w3-green w3-input round_b" >تغییر قیمت</button>

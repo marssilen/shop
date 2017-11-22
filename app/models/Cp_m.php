@@ -168,11 +168,11 @@ function get_menu(){
 $result=$this->db->select("SELECT * FROM menu ");//,array('pa'=>0)
 return $result;
 }
-function add_menu(){
-$this->db->insert('menu',array('parent'=>'0'));
+function add_menu($menu,$href,$parent){
+$this->db->insert('menu',array('menu'=>$menu,'href'=>$href,'parent'=>$parent));
 }
 function change_menu($post){
-$this->db->update("menu",array('menu'=>$post['menu'],'href'=>$post['href'],'parent'=>$post['parent']),'id='.$post['id']);
+$this->db->update("menu",array('menu'=>$post['menu'],'href'=>$post['href']),'id='.$post['id']);
 }
 function remove_menu($id){
 return $this->db->delete('menu',"id=$id");
@@ -222,6 +222,7 @@ function delete_cat($id){
 //    echo '<pre>';
     $children=array_filter($this->get_child($id));
 //    print_r($children);
+//    die();
     foreach ($children as $child){
         foreach ($child as $grand) {
 //            print($grand['id'].' ');

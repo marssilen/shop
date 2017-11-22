@@ -24,7 +24,7 @@ $sub_menu=array();
 </div>
 <div class="w3-top">
 <div class="w3-bar w3-white w3-card-2" id="myNavbar">
-    <div style="position: relative" class="w3-">
+    <div style="position: relative" class="w3-margin-top">
     <div class="w3-right" style="display: block">
     <?php if(!$this->is_login){ ?>
         <a href="<?= LINK ?>" style="padding: 10px" onclick="document.getElementById('loginbox').style.display='block';">وارد شوید</a>
@@ -35,19 +35,17 @@ $sub_menu=array();
         ?>
         <a href="<?= URL ?>cp/" style="padding: 10px"> مدیریت کاربری</a>
         <a href="<?= URL ?>cp/logout/"> خروج</a>
+        <a href="<?=URL?>cp/factor_review" class="basket w3-green w3-round w3-border-green" style="position: relative;text-decoration: none;line-height: 35px;margin-right:15px"><i id="basket"></i>سبد خرید <span id="basketItems" class="badge"><?=$this->model('Menu_m')->count_items_in_basket()?></span></a>
     <?php } ?>
     </div>
-
         <a href="<?=URL?>" class="" style="position: absolute;left: 10px;top: 0px"><img src="<?=URL?>public/logo.jpg" height="36"></a>
-        <form style="position: relative" class="center w3-margin-top container w3-center">
-<!--            <button class="w3-btn w3-green w3-round">سبد خرید <span class="w3-badge w3-grey">12</span> </button>-->
-            <input placeholder="جستجو" class="w3-border w3-border-gray w3-round" style="padding-right: 10px;position: absolute;width: 100%;margin: 0px;left: 0px;height: 36px">
-<!--            <input class="w3-border w3-border-blue" style="display: inline-block;width: 80%;margin: 0px">-->
-<!--            <button class="w3-rest w3-btn w3-green w3-round" style="padding:2px;padding-left:10px;padding-right:10px;margin: 0px">-->
-<!--                <span class="w3-text-light-grey glyphicon glyphicon-search"></span></button>-->
+        <form style="display: inline-block;margin-right: 25px" class="top_center">
+<!--     w3-margin-top position: relative      -->
+            <input placeholder="جستجو" class="w3-border w3-white w3-border-gray w3-round" style="padding-right: 10px;position: ;width: 100%;margin: 0px;left: 0px;height: 36px">
             <button id="btnSearch"></button>
         </form>
     </div>
+
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small w3-margin-top w3-light-gray" style="display: block;width: 100%">
 	  <?php foreach($menu_list as $menu){ ?>

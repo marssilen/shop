@@ -5,7 +5,7 @@ class Cat_m extends Model
 		parent::__construct();
 	}
 	function getCatItems($cat,$page,$rows=10){
-        return $this->db->pagination("SELECT items.id,items.name,items.long_description,items.card_image FROM items WHERE items.cat=:cat",
+        return $this->db->pagination("SELECT items.id,items.name,items.card_image FROM items WHERE items.cat=:cat",
             array('cat' => $cat),$page,$rows
             );
     }
@@ -22,5 +22,27 @@ class Cat_m extends Model
     function count($cat){
         $result=$this->db->select("SELECT count(items.id) as count FROM items WHERE items.cat=:cat",array('cat' => $cat));
         return $result[0]['count'];
+    }
+    function get_child($id){
+        $result=$this->db->select('select id,cat from category WHERE pa_cat=:parent',array('parent'=>$id));
+
+        foreach ($result as $ch){
+            $this->get_child($ch['id']);
+        }
+        $this->cat_child[]=$result;
+        return $this->cat_child;
+    }
+    function getCat($id){
+        if($id==0)return;
+        $result=$this->db->select('select id,cat,pa_cat from category WHERE id=:id',array('id'=>$id));
+        foreach ($result as $ch){
+            $this->getCat($ch['pa_cat']);
+        }
+        $this->cat_pa[]=$result;
+        return $this->cat_pa;
+    }
+    function getCats($id){
+        $result=$this->db->select('select id,cat from category WHERE pa_cat=:parent',array('parent'=>$id));
+        return $result;
     }
 }

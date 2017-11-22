@@ -38,7 +38,6 @@ $(function(){
     $('#login_btn').on('click',login);
     function ajax(url,data){
         $.post(url,data,function(da){
-            show_mesage(da);
             msg(da,1);
         }).done(function(){
             msg("done",1)
@@ -48,16 +47,12 @@ $(function(){
     }
     function msg(message,type){
         var msg_obj = jQuery.parseJSON(message);
-        show_mesage(message);
         if( msg_obj.st === "please login" ){
-            $("#login_modal").show();
-        }
-        if( msg_obj.st === "please login" ){
-            $("#login_modal").show();
+            $("#loginbox").show();
         }
         if( msg_obj.st === "added to basket" ){
             show_mesage("به سبد خرید اضافه شد");
-            $('#tedad').html(msg_obj.tedad);
+            $('#basketItems').html(msg_obj.tedad);
         }
         if( msg_obj.st === "added to favorites" ){
             show_mesage("به لیست علاقه مندی ها اضافه شد");
@@ -65,7 +60,7 @@ $(function(){
         if( msg_obj.st === "logged" ){
             $.ajax({url: "<?=URL?>ajax/header", success: function(result){
                 $("#l_header").html(result);
-                $("#login_modal").hide();
+                $("#loginbox").hide();
             }});
         }
 
@@ -76,14 +71,13 @@ $(function(){
         ajax(url,data);
     }
     function buy(){
-        show_mesage("buy");
         var data=$('#form').serialize();
-        url='sf';
+        url='<?=URL.'page/'?>sf';
         ajax(url,data);
     }
     function fav(){
         var data=$('#form').serialize();
-        url='add_to_favorite';
+        url='<?=URL.'page/'?>add_to_favorite';
         ajax(url,data);
     }
     function show_mesage(msg) {

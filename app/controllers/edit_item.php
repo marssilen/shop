@@ -104,7 +104,7 @@ class Edit_item extends ControllerPanel
         $this->check_id($id);
         if(isset($_POST['change_price'])){
             $formModel=$this->model('Edit_item_m');
-            $formModel->change_price($id,$_POST['old_price'],$_POST['price']);
+            $formModel->change_price($id,$_POST['price']);
             header("Location: ".URL."edit_item/$id");
         }
     }

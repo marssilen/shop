@@ -1,14 +1,37 @@
-/*.dk-box{background-color:#fff;border:1px solid #ebeced;-ms-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.1);-ms-box-shadow:0 1px 2px 0 rgba(0,0,0,.1);box-shadow:0 1px 2px 0 rgba(0,0,0,.1);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow:hidden}*/
-/*.current{color:#fff;background-color:#666;border-left-color:#666}*/
-/*li.current{background-color:#fff;box-shadow:0 0 3px #cccfd1;border-bottom:1px solid #fff}*/
-/*.navigation .mrg-auto ul.root>li>ul.level>li.current>a{color:#ef3f3e;border-bottom:2px solid #ee3e3e;background:url(../Image/Navigation/vtwo/arrow-3.png) no-repeat bottom center}*/
-/*li.current{color:#7e7e7e}*/
-/*span.current{color:#7e7e7e}*/
-/*.tabs .tabItem{float:right;cursor:pointer;height:32px;width:95px;border-left:1px solid #ccc;line-height:28px}*/
-/*.tabs .tabItem.current{color:#fff;background-color:#666;border-left-color:#666}*/
-/*.tabs .tabItem.last{border-left:0;width:90px}*/
-/*.tabs .sep{padding:0 2px}*/
-/*.tabs-list{overflow:hidden;position:relative;width:380px}*/
+a{
+    text-decoration: none;
+}
+.plus{
+    /*margin: 10px;*/
+}
+.plus:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.basket{
+    border:none;display:inline-block;outline:0;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap;
+    width: 168px;
+    height: 36px;
+    padding: 0px;
+    padding-right: 10px;
+    z-index: 0;
+    text-decoration: none;
+}
+.basket:hover{background-color: #00c314 !important}
+.badge{
+    font-size: 13px;
+    font-family: arial;
+    width: 24px;
+    height: 24px;
+    /*margin: 7px 7px 0 0;*/
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #5fbf63;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+}
 #btnSearch {
     top: 0;
     left: 0px;
@@ -35,6 +58,15 @@
     width: 38px;
     height: 38px;
     background: url("http://localhost/shop/public/slices.png") no-repeat -144px -413px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+#basket{
+    padding: 0px;
+    width: 38px;
+    height: 38px;
+    background: url("http://localhost/shop/public/slices.png") no-repeat -196px -413px;
     position: absolute;
     right: 10px;
     top: 0px;
@@ -108,6 +140,24 @@ tr:nth-child(odd){background-color: #f2f2f2}
     color: red;
 }
 .price-sec{
+    color: rgb(76, 175, 80);
+    direction: rtl;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 23px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: 400;
+    line-height: 32px;
 }
 .info span{
     display: block;
@@ -239,6 +289,12 @@ a{
   .mycontainer{
 	padding:8px;
 }
+  .top_center{
+      width:800px;
+      position:relative;
+      /*margin-left: auto ;*/
+      /*margin-right: auto ;*/
+  }
 .center{
 	max-width:1200px;
 	position:relative;
