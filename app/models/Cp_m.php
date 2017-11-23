@@ -20,6 +20,13 @@ function change_file($id,$name,$alt,$oldfilename){
             $this->db->insert('image',array('image'=>$new_image,'image_thumb'=>$new_image,'alt'=>$alt));
         }
     }
+    function slide_pic($id,$image){
+        $this->db->update("slider",array("image"=>$image),"id=".$id);
+    }
+    function change_slider(){
+        return $this->db->update('slider',array('title'=>$_POST['title'],'desc'=>$_POST['desc'],
+            'old_price'=>$_POST['old_price'],'price'=>$_POST['price'],'url'=>$_POST['url']),'id='.$_POST['id']);
+    }
     function get_slider(){
         return $this->db->select("select * from slider");
     }

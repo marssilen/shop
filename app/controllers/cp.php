@@ -58,20 +58,21 @@ public function home_page()
         if(form::check($_POST,$req,false)) {
             $this->formModel->home_cat_change($_POST['id'],$_POST['cat']);
         }
-        $req= array('id','change-slider','title','old-price','price','url','desc');
+        $req= array('id','change-slider','title','old_price','price','url','desc');
         if(form::check($_POST,$req,false)) {
-//            $this->formModel->home_cat_change($_POST['id'],$_POST['cat']);
-            echo '<br>';
-            echo '<br>';
-            echo '<br>';
-            echo '<br>';
-            echo '<br>';
-            print_r($_POST);
+            $this->formModel->change_slider();
+//            echo '<br>';
+//            echo '<br>';
+//            echo '<br>';
+//            echo '<br>';
+//            echo '<br>';
+//            print_r($_POST);
         }
         $req= array('id','slide-pic');
         if(form::check($_POST,$req,false)) {
-            echo $this->upload_a_file(true);
-//            $this->formModel->home_pic($_POST['id'],$imagename);
+            $imagename= $this->upload_a_file(true);
+//            echo $_POST['id'];
+            $this->formModel->slide_pic($_POST['id'],$imagename);
         }
         $data = $this->formModel->home_get_all_card();
         $cat_items=$this->formModel->get_all_home_cat();

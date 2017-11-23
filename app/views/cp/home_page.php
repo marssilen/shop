@@ -9,14 +9,14 @@
                         <div dir="ltr" style="margin-top: 40px">
                             <div class="w3-col s6 w3-center" style="padding: 5px">
                                 <div style="font-size: 28px;color: #3c3c3c"><?=$slide['title']?></div>
-                                <img class="" src="<?=URL?>public/upload/speaker.jpg">
+                                <img class="" src="<?=URL?>public/upload/<?=$slide['image']?>"  height="220" width="220">
                             </div>
                             <div class="w3-col s6 w3-center" dir="rtl" style="padding: 15px">
                                 <div style="text-align: right;color: red;font-size: 28px">پشنهاد ویژه امروز</div>
-                                <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old-price']?></span></div>
-                                <p style="text-align: right"><?=$slide['decs']?>
+                                <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old_price']?></span></div>
+                                <p style="text-align: right"><?=$slide['desc']?>
                                 </p>
-                                <button class="w3-btn w3-round w3-blue" onclick="document.getElementById('pic-id').value='<?=$slide['id']?>';document.getElementById('slide-id').value='<?=$slide['id']?>';document.getElementById('slider-form').style.display='block';return false;">change</button>
+                                <button class="w3-btn w3-round w3-blue" onclick="document.getElementById('pic-id').value='<?=$slide['id']?>';document.getElementById('slide-id').value='<?=$slide['id']?>';document.getElementById('slider-form').style.display='block';return false;">تغییر</button>
                             </div>
                         </div>
                         <!--                <div data-seconds-left="38674.317" class="timer"><span class="timer__holder timer__holder--hours"><span>1</span><span>0</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--minutes"><span>3</span><span>3</span></span><span class="timer__spacer">:</span><span class="timer__holder timer__holder--seconds"><span>1</span><span>1</span></span>-->
@@ -276,8 +276,8 @@
             <input class="w3-input" id="title" name="title" placeholder="title">
             </div>
             <div class="w3-panel w3-rightbar">
-                <label for="old-price">old price</label>
-                <input class="w3-input" id="old-price" name="old-price" placeholder="old price">
+                <label for="old_price">old price</label>
+                <input class="w3-input" id="old_price" name="old_price" placeholder="old price">
             </div>
             <div class="w3-panel w3-rightbar">
                 <label for="price">price</label>

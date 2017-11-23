@@ -13,12 +13,12 @@ require_once('app/views/head.php'); ?>
                     <div dir="ltr" style="margin-top: 40px">
                         <div class="w3-col s6 w3-center" style="padding: 5px">
                             <div style="font-size: 28px;color: #3c3c3c"><?=$slide['title']?></div>
-                            <img class="" src="<?=URL?>public/upload/speaker.jpg">
+                            <img class="" src="<?=URL?>public/upload/<?=$slide['image']?>" height="220" width="220">
                         </div>
                         <div class="w3-col s6 w3-center" dir="rtl" style="padding: 15px">
                             <div style="text-align: right;color: red;font-size: 28px">پشنهاد ویژه امروز</div>
-                            <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old-price']?></span></div>
-                            <p style="text-align: right"><?=$slide['decs']?>
+                            <div class="w3-row"><span class="w3-col s8 w3-green title"><?=$slide['price']?> تومان</span><span class="w3-col s4 w3-grey" style="font-size: large;text-decoration:line-through;"><?=$slide['old_price']?></span></div>
+                            <p style="text-align: right"><?=$slide['desc']?>
                             </p>
                         </div>
                     </div>
