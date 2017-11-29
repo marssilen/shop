@@ -20,7 +20,7 @@ require_once('app/views/head.php'); ?>
         </p>
         <p>
             <span style="font-size: large"><?=$data['cat']?></span>
-            <span class="w3-text-gray">(نمایش 1-40 از 400)</span>
+            <span class="w3-text-gray">(نمایش <?=($data['page']-1)*10+1?>-<?=($data['page']-1)*10+count($data['items'])?> از <?=$data['count']?>)</span>
         </p>
         <p class="sort">
             مرتب سازی بر اساس:
@@ -32,7 +32,7 @@ require_once('app/views/head.php'); ?>
         </p>
         <hr>
     </div>
-    <?php foreach ($data['items'] as $parent) {foreach ($parent as $item) {?>
+    <?php foreach ($data['items'] as $item) {?>
         <div class="w3-col m3 s6" style="padding: 5px">
             <div class="img_c w3-border w3-hover-border-blue">
                 <a href="<?=URL?>page/<?=$item['id'].'/'.urlencode($item['name'])?>">
@@ -43,26 +43,26 @@ require_once('app/views/head.php'); ?>
                 </p>
             </div>
         </div>
-    <?php }} ?>
+    <?php } ?>
     </div>
     <div class="w3-col m2">
         <div class="w3-card-2 w3-margin-left w3-padding">
         <h6 style="font-family: 'yekan'">دسته بندی ها</h6>
             <ul>
                 <?php
-//                print_r($data['cats']);
                 $margin=0;
+                if(!empty($data['cats']))
                 foreach ($data['cats'] as $cat){
                     foreach ($cat as $ca) {$margin+=10;
                         ?>
-                        <li style="margin-right: <?=$margin?>px"><a href="<?= $ca ['id'] ?>" style="font-weight: bold;font-size: 15px"><span class="glyphicon glyphicon-triangle-bottom" style="font-size: 8px;margin-left: 5px"></span><?= $ca ['cat'] ?></a></li>
+                        <li style="margin-right: <?=$margin?>px"><a href="<?= URL.'cat/'.$ca ['id'].'/1/'.$ca ['cat'] ?>" style="font-weight: bold;font-size: 15px"><span class="glyphicon glyphicon-triangle-bottom" style="font-size: 8px;margin-left: 5px"></span><?= $ca ['cat'] ?></a></li>
                         <?php
                     }
                 }?>
                 <?php
                 foreach ($data['child'] as $child){
                 ?>
-                    <li style="margin-right: <?=$margin?>px"><a href="<?=$child['id']?>"><?=$child['cat']?></a></li>
+                    <li style="margin-right: <?=$margin?>px"><a href="<?=URL.'cat/'.$child['id'].'/1/'.$child['cat']?>"><?=$child['cat']?></a></li>
                 <?php } ?>
             </ul>
         </div>

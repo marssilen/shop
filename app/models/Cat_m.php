@@ -4,13 +4,16 @@ class Cat_m extends Model
 	function __construct(){
 		parent::__construct();
 	}
-	function getCatItems($cat,$page,$rows=10){
-        return $this->db->pagination("SELECT items.id,items.name,items.card_image FROM items WHERE items.cat=:cat",
-            array('cat' => $cat),$page,$rows
-            );
+	function counter($cat){
+        $result= $this->db->select("SELECT count(items.id) as count FROM items WHERE items.cat=:cat",
+            array('cat' => $cat));
+        return $result[0]['count'];
     }
-    function get_pview($cat,$page,$rows_per_page=10){
-        $numrows=$this->count($cat);
+	function getCatItems($sql,$page,$rows=10){
+//        return $this->db->select($sql);
+        return $this->db->pagination($sql, array(),$page,$rows);
+    }
+    function get_pview($cat,$sql,$numrows,$rows_per_page=10){
         $pages= ceil($numrows/$rows_per_page);
         return create_pview(URL.'cat/'.$cat,$pages,$this->get_cat_name($cat));
     }
@@ -19,8 +22,8 @@ class Cat_m extends Model
         if(isset($result[0]))
         return $result[0]['cat'];
     }
-    function count($cat){
-        $result=$this->db->select("SELECT count(items.id) as count FROM items WHERE items.cat=:cat",array('cat' => $cat));
+    function count($sql){
+        $result=$this->db->select($sql);
         return $result[0]['count'];
     }
     function get_child($id){
