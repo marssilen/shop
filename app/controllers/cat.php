@@ -6,15 +6,37 @@ class Cat extends Controller
 	        $items=array();
 	        $m=$this->formModel->get_child($cat);
 //            echo '<pre>';
-//            print_r($m);
+//            print_r($_GET);
 //            echo '</pre>';
-            $string='SELECT id,name,card_image FROM items WHERE cat='.$cat;
+//
+//            die();
+            $string='SELECT id,name,card_image,view,price FROM items WHERE cat='.$cat;
             $count_str='SELECT count(id) as count FROM items WHERE cat='.$cat;
             $children=array_filter($m);
             foreach ($children as $child){
                 foreach ($child as $mycat){
                     $string.=' OR cat='.$mycat['id'];
                     $count_str.=' OR cat='.$mycat['id'];
+                }
+            }
+            if(isset($_GET['sort'])){
+                switch($_GET['sort']) {
+                    case 1:
+                        $string .= ' ORDER BY view';
+                        break;
+                    case 2:
+                        $string .= ' ORDER BY view';
+                        break;
+                    case 3:
+                        $string .= ' ORDER BY id';
+                        break;
+                    case 4:
+                        $string .= ' ORDER BY price';
+                        break;
+                    case 5:
+                        $string .= ' ORDER BY price DESC';
+//                        die();
+                        break;
                 }
             }
             $items = $this->formModel->getCatItems($string, $page);
