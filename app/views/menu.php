@@ -26,15 +26,19 @@ $menu_list=$this->model('Menu_m')->get_menu();
 
 
 
+
+
 <div class="w3-bar w3-white w3-card-2">
 <div class="container" id="myNavbar">
-<!--    <a href="--><?//=URL?><!--" class="w3-bar-item w3-button w3-wide"><img src="--><?//=URL?><!--public/logo.jpg" height="30"></a>-->
+    <a href="<?=URL?>" class="w3-bar-item w3-button w3-wide"><img src="<?=URL?>public/logo.jpg" height="30"></a>
     <div style="position: relative" class="w3-margin-top">
         <?php if(!$this->is_login){ ?>
             <div class="w3-right" style="display: block">
                 <a href="javascript:void(0)" style="padding: 10px" onclick="document.getElementById('loginbox').style.display='block';">وارد شوید</a>
                 <a href="<?=URL?>signup/"> ثبت نام</a>
             </div>
+        <?php }else{ ?>
+        <a href="<?=URL?>cp/factor_review" class="basket w3-green w3-round w3-border-green" style="position: relative;text-decoration: none;line-height: 35px;margin-right:15px"><i id="basket"></i>سبد خرید <span id="basketItems" class="badge"><?=$this->model('Menu_m')->count_items_in_basket()?></span></a>
         <?php } ?>
         <form style="display: inline-block;margin-right: 25px" class="top_center">
             <input placeholder="جستجو" class="w3-border w3-white w3-border-gray w3-round" style="padding-right: 10px;position: ;width: 100%;margin: 0px;left: 0px;height: 36px">
