@@ -1,5 +1,7 @@
 <?php
-$settings=$this->settings;
+if(isset($this)) {
+    $settings = $this->settings;
+}
 ?>
 <!doctype html>
 <html lang="fa">

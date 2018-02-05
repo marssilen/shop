@@ -3,7 +3,7 @@ require_once('app/views/head.php'); ?>
 <body>
 <div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
-    <div id="content">
+    <div id="content" style="margin-top:16px">
 <div id="amazingoffer" class="dk-box mrg-bottom waiting w3-row w3-light-grey center w3-card-2 w3-round"
      style="height: 400px;max-width:1000px;overflow: hidden">
     <div class="">

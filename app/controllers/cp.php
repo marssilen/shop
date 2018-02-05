@@ -273,7 +273,10 @@ function edit_user($id){
 
     if(isset($_POST['sub'])){
     //print_r($_POST);
-    $this->formModel->edit_user($id,array('email'=>htmlentities($_POST['email']),
+        if($_POST['barperc']>100 || $_POST['barperc']<0){
+            msg('میزان درصد را درست وارد نمایید');
+        }
+    $this->formModel->edit_user($id,array('email'=>htmlentities($_POST['email']),'barperc'=>htmlentities($_POST['barperc']),
     'phone'=>htmlentities($_POST['tel']),'role'=>htmlentities($_POST['role']),
     'block'=>htmlentities($_POST['block'])));
     }

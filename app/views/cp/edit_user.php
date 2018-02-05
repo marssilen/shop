@@ -18,6 +18,12 @@
         <input name="tel" type="tel" class="form-control" id="pwd" placeholder="" value="<?= (isset($data['phone']))?$data['phone']:'' ?>">
       </div>
     </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">درصد تخفیف</label>
+          <div class="col-sm-10">
+              <input name="barperc" type="number" class="form-control" id="barperc" placeholder="درصد تخفیف کاربر" value="<?= (isset($data['barperc']))?$data['barperc']:'' ?>">
+          </div>
+      </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="pwd">نقش کاربری</label>
       <div class="col-sm-10">

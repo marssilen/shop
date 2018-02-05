@@ -49,7 +49,7 @@ $(function (){
             }
             x[slideIndex - 1].style.display = "block";
             y[slideIndex - 1].classList.add("w3-red");
-            setTimeout(slide, 1000);
+            setTimeout(slide, 3000);
         }
     }
     slide();

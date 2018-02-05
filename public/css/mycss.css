@@ -1,3 +1,22 @@
+.msg{
+    max-width: 500px;
+    text-align: center;
+        margin: auto;
+    margin-top: 20px;
+
+    background: red;
+    border-radius:4px;
+}
+.h1 {
+    display: block;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: Yekan;
+    font-size: 20px;
+}
 a{
     text-decoration: none;
 }

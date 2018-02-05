@@ -18,9 +18,11 @@ class Login_m extends Model
 		$this->db->insert('userlist',array('username'=>strtolower($username),'password'=>sha1($password)));
 	}
 	public function signin($username,$password){
-			//  echo hash('sha256',$timestamp);
+//			  echo hash('sha256',$timestamp);
+//        echo $username.' '.$password;
 				$sth=$this->db->select("SELECT * FROM userlist WHERE username= :username AND password= :password",
 					array('username' => $username,'password' => sha1($password)));
+
 					$count=count($sth);
 				if($count>0){
 					if($sth[0]['block']){

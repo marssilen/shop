@@ -101,11 +101,11 @@ foreach($images as $image){
 <br>
     <div class="w3-card-2  w3-round">
     <form method="post" action="change_size/<?= $data['data']['id'] ?>">
-        <label for="auto_size">auto</label> <input id="auto_size" type="radio" name="size" value="auto" checked>
-        <label for="static_size">static</label> <input id="static_size" type="radio" name="size" value="static" <?php if($data['data']['width']!='100%')echo'checked';?>>
+        <label for="auto_size">بدون تخفیف</label> <input id="auto_size" type="radio" name="size" value="auto" checked>
+        <label for="static_size">با تخفیف</label> <input id="static_size" type="radio" name="size" value="static" <?php if($data['data']['width']!='100%')echo'checked';?>>
         <br>
-        width:<input name="width" id="img_width" type="number" class="w3-input" style="padding: 5px;width: 100px" placeholder="عرض" required value="<?= str_replace("px","",$data['data']['width']) ?>">
-        height:<input name="height" id="img_height" type="number" class="w3-input" style="padding5px;width:100px" placeholder="ارتفاع" required value="<?= str_replace("px","",$data['data']['height']) ?>"><br>
+        <input name="width" id="img_width" type="number" class="w3-input" style="padding: 5px;width: 100px" placeholder="عرض" required value="<?= $data['data']['width'] ?>">
+        <input name="height" id="img_height" type="number" class="w3-input" style="padding5px;width:100px" placeholder="ارتفاع" required value="<?= $data['data']['height'] ?>"><br>
         <button type="submit" name="change_size" style="margin-top:15px;" class="w3-btn w3-green w3-input round_b" >تغییر</button>
         <script>
             $(document).ready(function () {
