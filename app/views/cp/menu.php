@@ -21,9 +21,9 @@ $(function(){
         for(var i=0;i<ar.length;i++){
             if(ar[i].parent==pa) {
 count++;
-                x += '<li><a href="'+ar[i].href+'"> ' + ar[i].menu +'</a><a class="plus" onclick="showmsg('+ar[i].id
-                    +')" pa="'+ar[i].parent+'">+</a>'+'<a class="plus" onclick="setDelete('+ar[i].id
-                    +')">حذف </a>'+'<a class="plus" onclick="setEdit('+ar[i].id+",'"+ar[i].menu+"','"+ar[i].href
+                x += '<li><a class="w3-blue w3-btn w3-round plus" href="'+ar[i].href+'"> ' + ar[i].menu +'</a><a class="w3-yellow w3-btn w3-round plus" onclick="showmsg('+ar[i].id
+                    +')" pa="'+ar[i].parent+'">+</a>'+'<a class="w3-red w3-btn w3-round plus" onclick="setDelete('+ar[i].id
+                    +')">حذف </a>'+'<a class="w3-green w3-btn w3-round plus" onclick="setEdit('+ar[i].id+",'"+ar[i].menu+"','"+ar[i].href
                     +'\')">تغییر</a>'+ ctable(ar, ar[i].id) + '</li>';
             }
         }
