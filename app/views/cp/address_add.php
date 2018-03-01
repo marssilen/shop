@@ -1,14 +1,10 @@
-
-<br>
-
-
 <div class="w3-white container center" >
 <div class="w3-row">
 <div class="w3-card-2 w3-round-large"><!--left images-->
 <div class="w3-responsive">
     <script type="text/javascript">
        $(document).ready(function(){
-          
+
        send_change("#province");
        $("#province").on("change",not);
        function not(){
@@ -31,16 +27,6 @@
             }
             });
        }
-    
-// $("#button").click(function(){
-//      alert("ss");
-//    $.getJSON("http://192.168.1.2/golbon/ajax/province", function(result){
-//        $.each(result, function(i, field){
-//            $("#div").append("<p>"+field + "</p>");
-//        });
-//    });
-//});
-
     });
     </script>
     <style>
@@ -50,7 +36,7 @@
         .w3-input{
             margin-top: 16px;
             text-align: right;
-            resize: none;  
+            resize: none;
         }
         input[type=number]::-webkit-outer-spin-button,
         input[type=number]::-webkit-inner-spin-button
@@ -87,8 +73,7 @@
             background-color: white;
         }
     </style>
-    <a class="w3-btn w3-green" onclick="showaddmoadal()" href="<?=LINK?>">show</a>
-    <div class="w3-modal" id="add_address_modal">
+    <div class="" id="add_address_modal">
     <form class="padding-16" action="" method="POST">
         <label class="my_label">نام و نام خانوادگی تحویل گیرنده</label>
         <input required name="name" id="name" class="w3-input w3-round w3-border w3-border-blue" type="text">

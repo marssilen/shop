@@ -10,7 +10,6 @@
     <th>factor</th>
     <th>user</th>
     <th>status</th>
-    <th>code</th>
     <th>مشاهده</th>
   </tr>
 </thead>
@@ -23,7 +22,7 @@ foreach($data as $item){
   <td>
   <?=$GLOBALS['sta_array'][$item['status']]?>
   </td>
-  <td><?= $item['factor_id'] ?></td>
+<!--  <td>--><?//= $item['factor_id'] ?><!--</td>-->
   <td><a href="<?= URL.'cp/edit_order/'.$item['id'] ?>">مشاهده<a></td>
 </tr>
 </tr>
@@ -36,11 +35,3 @@ foreach($data as $item){
 </div>
 </div>
 </div>
-
-<?php
-echo'<pre>';
-
-print_r($data);
-echo'</pre>';
-
-?>

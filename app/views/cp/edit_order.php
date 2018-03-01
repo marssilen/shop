@@ -81,6 +81,3 @@ foreach($data['items'] as $item){
 </div>
 </div>
 </div>
-<pre>
-    <?php print_r($data);?>
-</pre>

@@ -12,13 +12,13 @@
 <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
 <thead>
 <tr class="w3-light-grey">
-  <th>id</th>
-  <th>name</th>
-  <th>phone</th>
-  <th>home</th>
-  <th>postal_code</th>
-  <th>detail</th>
-  <th>delete</th>
+  <th>شناسه</th>
+  <th>نام</th>
+  <th>موبایل</th>
+  <th>تلفن</th>
+  <th>کد پستی</th>
+  <th>جزئیات</th>
+  <th>حذف</th>
 </tr>
 </thead>
 <?php
@@ -27,13 +27,13 @@ foreach($data as $item){
 
 <tr>
 
-  <td> <a href="factor_show/<?= $item['id'] ?>"><?= $item['id'] ?></a></td>
+  <td><?= $item['id'] ?></td>
   <td><?= $item['name'] ?></td>
   <td><?= $item['s_phone'] ?></td>
   <td><?= $item['c_phone'] ?></td>
   <td><?= $item['postal_code'] ?></td>
-  <td><a href="address_detail/<?= $item['id'] ?>">show</a></td>
-  <td><a href="address_remove/<?= $item['id'] ?>">remove</a></td>
+  <td><a href="address_detail/<?= $item['id'] ?>">نمایش</a></td>
+  <td><a href="address_remove/<?= $item['id'] ?>">حذف</a></td>
 </tr>
 <?php
 

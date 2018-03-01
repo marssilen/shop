@@ -7,7 +7,7 @@
     background: red;
     border-radius:4px;
 }
-.h1 {
+.h1{
     display: block;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
@@ -16,6 +16,9 @@
     font-weight: bold;
     font-family: Yekan;
     font-size: 20px;
+}
+h6 > a{
+    font-family: IRANSans-web;
 }
 a{
     text-decoration: none;

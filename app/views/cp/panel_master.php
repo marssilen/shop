@@ -18,7 +18,7 @@
 <script src="<?= display(URL) ?>public/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="<?= display(URL) ?>public/js/myscript.js"></script>
 <!-- AngularJS -->
-<!--<script src="--><?//= display(URL) ?><!--public/js/angular.min.js"></script>-->
+<script src="<?= display(URL) ?>public/js/angular.min.js"></script>
 <style>
 body{
     text-align: right;
@@ -56,11 +56,9 @@ $('.mother').click(function(e) {
 });
 
 </script>
-<div class="container-fluid text-primary" style="margin-top:50px">
+<div class="container-fluid text-primary" style="margin-top:0px">
 <div class="row">
   <div class="col-xs-12 col-sm-2" align="center">
-  <!-- <h6><span class="glyphicon glyphicon-wrench"> </span></h6> -->
-  <hr>
   <div id="navigation" align="left" dir="ltr">
         <ul>
         <?php if(Session::get('role')=='admin'){?>
@@ -74,7 +72,7 @@ $('.mother').click(function(e) {
                   <li><a href="<?= display(URL) ?>cp/menu"><span class="glyphicon glyphicon-menu-hamburger"></span> منو ها </a></li>
 				  <li><a href="<?= display(URL) ?>cp/purchased"><span class="glyphicon glyphicon-shopping-cart"></span> سفارشات</a></li>
                   <li><a href="<?= display(URL) ?>cp/settings"><span class="glyphicon glyphicon-cog"></span> تنظیمات </a></li>
-                  <li><a href="<?= display(URL) ?>cp/"><span class="glyphicon glyphicon-cog"></span>انبار داری</a></li>
+                  <li><a href="<?= display(URL) ?>cp/stockroom"><span class="glyphicon glyphicon-cog"></span>انبار داری</a></li>
                 </ul>
             </li>
             <li>
@@ -101,13 +99,8 @@ $('.mother').click(function(e) {
             </li>
         </ul>
     </div>
-
-
-
-
   </div>
   <div class="col-xs-12 col-sm-10">
-      <br>
       <?php
       require_once 'app/views/'.$this->page.'.php';
       ?>

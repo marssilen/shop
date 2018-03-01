@@ -268,36 +268,36 @@
     });
 </script>
 <div class="w3-modal" id="slider-form">
-    <div class="w3-modal-content">
+    <div class="w3-modal-content w3-round" style="padding: 16px">
         <form action="" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" id="slide-id" value="">
             <div class="w3-panel w3-rightbar">
-            <label for="title">title</label>
-            <input class="w3-input" id="title" name="title" placeholder="title">
+            <label for="title">نام</label>
+            <input class="w3-input" id="title" name="title">
             </div>
             <div class="w3-panel w3-rightbar">
-                <label for="old_price">old price</label>
-                <input class="w3-input" id="old_price" name="old_price" placeholder="old price">
+                <label for="old_price">قیمت اصلی</label>
+                <input class="w3-input" id="old_price" name="old_price">
             </div>
             <div class="w3-panel w3-rightbar">
-                <label for="price">price</label>
-                <input class="w3-input" id="price" name="price" placeholder="price">
+                <label for="price">قیمت با تخفیف</label>
+                <input class="w3-input" id="price" name="price">
             </div>
             <div class="w3-panel w3-rightbar">
                 <label for="url">URL</label>
-                <input class="w3-input" id="url" name="url" placeholder="url">
+                <input class="w3-input" id="url" name="url">
             </div>
             <div class="w3-panel w3-rightbar">
-                <label for="desc">description</label>
-                <textarea class="w3-input" id="desc" name="desc" placeholder="description"></textarea>
+                <label for="desc">توضیحات</label>
+                <textarea class="w3-input" id="desc" name="desc"></textarea>
             </div>
-            <button class="btn btn-primary" type="submit" name="change-slider">change</button>
-            <button class="btn btn-danger" onclick="document.getElementById('slider-form').style.display='none';return false;">cancel</button>
+            <button class="btn btn-primary" type="submit" name="change-slider">تغییر</button>
+            <button class="btn btn-danger" onclick="document.getElementById('slider-form').style.display='none';return false;">لغو</button>
         </form>
         <form method="post" enctype="multipart/form-data" action="">
             <input name="image" type="file" id="image_upload" style="margin-top: 10px;margin-bottom: 10px" >
             <input name="id" type="hidden" id="pic-id" value="">
-            <button type="submit" name="slide-pic" class="btn btn-primary">ارسال</button>
+            <button type="submit" name="slide-pic" class="btn btn-primary">ارسال عکس</button>
         </form>
     </div>
 </div>

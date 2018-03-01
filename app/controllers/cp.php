@@ -11,22 +11,30 @@ Session::destroy();
 header('location: '.URL);
 exit;
 }
-public function delete_file($filename){
-    if(Session::get('role')=='admin'){
-        echo unlink('public/upload/'.$filename);
-        header("Location: ".URL."cp/files/");
-    }
-}public function edit_file($filename){
-    if(Session::get('role')=='admin'){
-        $req=array('id','submit','alt','name');
-        if(form::check($_POST,$req,true)){
-            $filename=$this->formModel->change_file($_POST['id'],$_POST['name'],$_POST['alt'],$filename);
-            header("Location: ".URL."cp/edit_file/$filename");
+public function delete_file(){
+      if(isset($_GET['name'])) {
+        $filename = $_GET['name'];
+        if (Session::get('role') == 'admin') {
+            if(file_exists('public/upload/'.$filename)) {
+                unlink('public/upload/'.$filename);
+                header("Location: ".URL."cp/files/");
+            }
         }
-        $file=$this->formModel->get_file($filename);
-        if(isset($file[0]))
-        $this->view('cp/edit_file',$file[0],true);
-        else echo '404';
+    }
+}
+public function edit_file(){
+    if(isset($_GET['name'])) {
+        $filename = $_GET['name'];
+        if (Session::get('role') == 'admin') {
+            $req = array('submit', 'name');
+            if (form::check($_POST, $req, true)) {
+                $filename = $this->formModel->change_file($_POST['name'], $filename);
+                header("Location: " . URL . "cp/edit_file/&name=$filename");
+            }
+            if(file_exists('public/upload/'.$filename)) {
+                $this->view('cp/edit_file', $filename, true);
+            }
+        }
     }
 }
 public function home_page()
@@ -102,38 +110,41 @@ public function home_page()
     public function files($page=1){
         $data=array();
         if(isset($_POST['add_card_image'])){
-            $imagename=	$this->upload_a_file();
+            $imagename=	$this->upload_a_file(true);
+            $data= URL.'public/upload/'.$imagename;
             $this->formModel->add_image($imagename,$_POST['alt']);
+            $this->view('cp/msg',['data'=>$data],true);
+            die();
         }
-    $row=20;
-    $index=($page-1)*$row;
-    $max=($page)*$row;
+        $row=50;
+        $index=($page-1)*$row;
+        $max=($page)*$row;
 //    echo '<pre>';
-    $directory = 'public/upload/';
-    $scanned_directory = array_diff(scandir($directory,1), array('..', '.'));
-    if(count($scanned_directory)<$index+$row){
-        $max=count($scanned_directory);
-    }
-    for($i=$index;$i<$max;$i++){
+        $directory = 'public/upload/';
+        $scanned_directory = array_diff(scandir($directory,1), array('..', '.'));
+        if(count($scanned_directory)<$index+$row){
+            $max=count($scanned_directory);
+        }
+        for($i=$index;$i<$max;$i++){
 //        echo $scanned_directory[$i]."\n";
-        $data[]=$scanned_directory[$i]."\n";
-    }
-    if(count($scanned_directory)%$row==0){
-        $pages = count($scanned_directory) / $row ;
-    }else {
-        $pages = count($scanned_directory) / $row + 1;
-    }
-    $pview=create_pview(URL.'cp/files',$pages);
-    $this->view('cp/files',['data'=>$data,'pview'=>$pview],true);
+            $data[]=$scanned_directory[$i]."\n";
+        }
+        if(count($scanned_directory)%$row==0){
+            $pages = count($scanned_directory) / $row ;
+        }else {
+            $pages = count($scanned_directory) / $row + 1;
+        }
+        $pview=create_pview(URL.'cp/files',$pages);
+        $this->view('cp/files',['data'=>$data,'pview'=>$pview],true);
 //    print_r($scanned_directory);
-}
+    }
 public function index(){
 $this->my_favorites();
 }
 public function items($pageno=1)
 {
 	if(isAdmin()){
-		$rows_per_page=8;
+		$rows_per_page=24;
 		$data=$this->formModel->get_all($pageno,$rows_per_page);
 		$pview=$this->formModel->get_pview('items','cp/items',$rows_per_page);
 		$this->view('cp/index',['data'=>$data,'pview'=>$pview],true);
@@ -207,7 +218,15 @@ function show_cat($id=0){
 		$this->view('cp/cat',$data,true);
 }
 }
-
+    function add_address2(){
+        $req=array('name','c-phone','s-phone','province','city','address','postal-code','submit');
+        if(form::check($_POST, $req,TRUE)){
+            $user_id= Session::get('id');
+            $this->formModel->add_address($user_id,$_POST);
+        }else {
+        }
+        header('location: '.URL.'cp/factor_review');
+    }
 function add_address(){
 $req=array('name','c-phone','s-phone','province','city','address','postal-code','submit');
 if(form::check($_POST, $req,TRUE)){
@@ -222,13 +241,11 @@ $this->view('cp/address_add',$data);
 }
 function address(){
 $address=$this->formModel->get_address();
-print_r($address);
 $this->view('cp/my_address',$address);
 }
 function address_detail($id){
 // validate id
 $data=$this->formModel->get_address_detail($id);
-print_r($data);
 $this->view('cp/address_detail',$data);
 }
     function settings(){

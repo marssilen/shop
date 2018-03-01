@@ -6,7 +6,6 @@ require_once('app/views/head.php'); ?>
 <div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
 <div id="content" style="margin-top: 10px">
-
 <div class="w3-row" style="padding: 10px;margin-top: 10px;margin-bottom: 10px">
     <div class="w3-col m10 w3-white w3-card-2 w3-padding" style="overflow: hidden">
     <div>
@@ -44,6 +43,8 @@ require_once('app/views/head.php'); ?>
     </div>
     <div class="w3-col m2">
         <div class="w3-card-2 w3-margin-left w3-padding">
+            <h6 style="font-family: 'yekan'">انتخاب شما</h6>
+            <span class="w3-round w3-border w3-border-grey w3-light-gray" style="padding-left: 30px;padding-right: 10px"><?=htmlentities($data['q'])?></span>
         <h6 style="font-family: 'yekan'">دسته بندی ها</h6>
             <ul>
                 <?php

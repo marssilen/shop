@@ -8,9 +8,8 @@ parent::__construct();
 function get_file($name){
     return $this->db->select('select * from image WHERE image=:name',array('name'=>$name));
 }
-function change_file($id,$name,$alt,$oldfilename){
+function change_file($name,$oldfilename){
     rename('public/upload/'.$oldfilename,'public/upload/'.$name);
-    $this->db->update('image',array('image'=>$name,'alt'=>$alt),"id=$id");
     return $name;
 }
     function add_image($new_image,$alt){
