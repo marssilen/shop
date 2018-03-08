@@ -33,8 +33,8 @@ $menu_list=$this->model('Menu_m')->get_menu();
         <?php }else{ ?>
         <a href="<?=URL?>cp/factor_review" class="basket w3-green w3-round w3-border-green" style="position: relative;text-decoration: none;line-height: 35px;margin-right:15px"><i id="basket"></i>سبد خرید <span id="basketItems" class="badge"><?=$this->model('Menu_m')->count_items_in_basket()?></span></a>
         <?php } ?>
-        <form style="display: inline-block;margin-right: 25px" class="top_center" action="<?=URL?>search/" method="get">
-            <input name="q" placeholder="جستجو" class="w3-border w3-white w3-border-gray w3-round" style="padding-right: 10px;position: ;width: 100%;margin: 0px;left: 0px;height: 36px">
+        <form class="searchBox" action="<?=URL?>search/" method="get">
+            <input name="q" placeholder="جستجو" class="w3-border w3-white w3-border-gray w3-round search">
             <button id="btnSearch"></button>
         </form>
     </div>

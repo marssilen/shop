@@ -26,6 +26,13 @@ class Edit_item extends ControllerPanel
 				  echo $e->getMessage();
 			}
 		}
+		if(isset($_POST['insert_short'])){
+		  try {
+				  $formModel->change_short_text($id,$_POST['short_description']);
+			} catch (Exception $e) {
+				  echo $e->getMessage();
+			}
+		}
 		$data=$formModel->show($id);
 		if(!isset($data[0])){
 			header("Location: ../cp/");

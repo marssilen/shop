@@ -15,7 +15,7 @@ class Edit_item_m extends Model
 		$result=$this->db->query($sql);
 		return $result->rowCount();
 	}
-	function change_text_s($id,$short_description){
+	function change_short_text($id, $short_description){
 		$sql="UPDATE `items` SET
 		`short_description` = '$short_description' WHERE `items`.`id` = $id";
 		$result=$this->db->query($sql);

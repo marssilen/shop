@@ -88,7 +88,7 @@ $('.mother').click(function(e) {
                     <li><a href="<?= display(URL) ?>cp/factor_review">سبد خرید</a></li>
                   <li><a href="<?= display(URL) ?>cp/my_orders">سفارشات من</a></li>
                   <li><a href="<?= display(URL) ?>cp/my_favorites">لیست مورد علاقه</a></li>
-                  <li><a href="<?= display(URL) ?>cp/track">رهگیری سفارشات</a></li>
+<!--                  <li><a href="--><?//= display(URL) ?><!--cp/track">رهگیری سفارشات</a></li>-->
                     <li><a href="<?= display(URL) ?>cp/address">آدرس های من</a></li>
 <!--                    -->
 <!--                  <li><a href="--><?//= display(URL) ?><!--cp/my_comments">نظرات من</a></li>-->

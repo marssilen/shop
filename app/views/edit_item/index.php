@@ -7,7 +7,7 @@ $images=  $data['data']['image'];
   <?php require_once('app/views/header.php'); ?>
   <?php require_once('app/views/menu.php'); ?>
 <script src="<?= URL ?>public/js/ckeditor/ckeditor.js"></script>
-<div style="margin-top: 80px;margin-right:5px;padding: 0px">
+<div style="margin-top: 20px;margin-right:5px;padding: 0px">
   <div class="w3-card" style="display: inline-block;padding: 5px;">
 <a href="<?= 'delete_item/'.$data['data']['id'].'/'.urlencode($data['data']['name']) ?>"><button class="w3-padding-2 w3-btn w3-red w3-round w3-border">حذف</button></a>
 <a href="<?=URL.'page/'.$data['data']['id']; ?>"><button class="w3-padding-2 w3-btn w3-blue w3-round w3-border">نمایش</button></a>
@@ -53,21 +53,32 @@ foreach($images as $image){
 
 <form method="post" enctype="multipart/form-data">
 <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $this->max_file_size; ?>">
-<textarea name="long_description" id="editor1" rows="500" style="height: 800px"><?php echo $data['data']['long_description'] ?></textarea><br>
- <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( 'editor1' );
-</script>
+<textarea name="short_description" id="editor1" rows="500" style="height: 800px"><?php echo $data['data']['short_description'] ?></textarea><br>
+
 <div style="margin:5px">
-<button type="submit" name="insert" class="w3-btn w3-green w3-round w3-right" >ثبت</button>
+<button type="submit" name="insert_short" class="w3-btn w3-green w3-round w3-right" >ثبت</button>
 </div>
 <br><br>
 
 </form>
 
 
+<!--another editor*-->
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $this->max_file_size; ?>">
+        <textarea name="long_description" id="editor2" rows="500" style="height: 800px"><?php echo $data['data']['long_description'] ?></textarea><br>
+        <script>
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace( 'editor1' );
+            CKEDITOR.replace( 'editor2' );
+        </script>
+        <div style="margin:5px">
+            <button type="submit" name="insert" class="w3-btn w3-green w3-round w3-right" >ثبت</button>
+        </div>
+        <br><br>
 
+    </form>
 
 
 </div>
@@ -99,34 +110,14 @@ foreach($images as $image){
 
 </div>
 <br>
-    <div class="w3-card-2  w3-round">
-    <form method="post" action="change_size/<?= $data['data']['id'] ?>">
-        <label for="auto_size">بدون تخفیف</label> <input id="auto_size" type="radio" name="size" value="auto" checked>
-        <label for="static_size">با تخفیف</label> <input id="static_size" type="radio" name="size" value="static" <?php if($data['data']['width']!='100%')echo'checked';?>>
-        <br>
-        <input name="width" id="img_width" type="number" class="w3-input" style="padding: 5px;width: 100px" placeholder="عرض" required value="<?= $data['data']['width'] ?>">
-        <input name="height" id="img_height" type="number" class="w3-input" style="padding5px;width:100px" placeholder="ارتفاع" required value="<?= $data['data']['height'] ?>"><br>
-        <button type="submit" name="change_size" style="margin-top:15px;" class="w3-btn w3-green w3-input round_b" >تغییر</button>
-        <script>
-            $(document).ready(function () {
-                $("#auto_size").change(function () {
-                    $("#img_height").attr("disabled", true);
-                    $("#img_width").attr("disabled", true);
-                });
-                $("#static_size").change(function () {
-                    $("#img_height").attr("disabled", false);
-                    $("#img_width").attr("disabled", false);
-                });
-                var is_auto=document.getElementById("auto_size");
-                if(is_auto.checked) {
-                    $("#img_height").attr("disabled", true);
-                    $("#img_width").attr("disabled", true);
-                }
-            });
-
-        </script>
-    </form>
-    </div>
+<!--    <div class="w3-card-2  w3-round">-->
+<!--    <form method="post" style="padding: 16px;" action="change_size/--><?//= $data['data']['id'] ?><!--">-->
+<!--        <label for="auto_size">بدون تخفیف</label> <input id="auto_size" type="radio" name="size" value="auto" checked>-->
+<!--        <br>-->
+<!--        <label for="static_size">با تخفیف</label> <input id="static_size" type="radio" name="size" value="static" --><?php //if($data['data']['width']!='100%')echo'checked';?><!-->-->
+<!--        <button type="submit" name="change_size" style="margin-top:15px;" class="w3-btn w3-green w3-input round_b" >تغییر</button>-->
+<!--    </form>-->
+<!--    </div>-->
 <div class="w3-card-2  w3-round" style="margin-top: 10px">
   <div class="w3-container w3-padding">
 <label class="w3-label w3-text-blue"><b>دسته بندی</b></label>

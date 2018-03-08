@@ -4,14 +4,14 @@ require_once('app/views/head.php'); ?>
 <div id="wrapper">
 <?php require_once('app/views/menu.php'); ?>
     <div id="content">
-        <div style="max-width:1000px;margin: auto;" class="w3-card-2 w3-container w3-round">
+        <div style="max-width:1000px;margin: auto;padding: 16px" class="w3-card-2 w3-container w3-round">
             <form method="post">
-                <input class="w3-input" name="uname" placeholder="username">
-                <input class="w3-input" name="email" placeholder="email" type="email">
-                <input class="w3-input" name="phone" placeholder="phone" type="tel">
-                <input class="w3-input" name="pass1" placeholder="password" type="password">
-                <input class="w3-input" name="pass2" placeholder="confirm password" type="password">
-                <button class="w3-input w3-hover-blue-gray" type="submit" name="submit">signup</button>
+                <input class="w3-input" name="uname" placeholder="نام کاربری">
+                <input class="w3-input" name="email" placeholder="ایمیل" type="email">
+                <input class="w3-input" name="phone" placeholder="تلفن" type="tel">
+                <input class="w3-input" name="pass1" placeholder="رمز" type="password">
+                <input class="w3-input" name="pass2" placeholder="تایید رمز" type="password"><br>
+                <button class="w3-input w3-hover-blue-gray" type="submit" name="submit">ثبت نام</button>
             </form>
         </div>
     </div>

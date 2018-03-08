@@ -11,6 +11,11 @@ Session::destroy();
 header('location: '.URL);
 exit;
 }
+public function stockroom(){
+    if (Session::get('role') == 'admin') {
+        $this->view('cp/stockroom', [], true);
+    }
+}
 public function delete_file(){
       if(isset($_GET['name'])) {
         $filename = $_GET['name'];
@@ -377,6 +382,7 @@ function profile(){
             $factor_id= $this->formModel->get_factor();
             $address=$this->formModel->get_address();
             $req=array('sel');
+            $barg= $this->formModel->get_bargPerc();
             //item hay sel vojood dashte bashad
             if(form::check($_POST, $req)){
                 foreach($_POST['sel'] as $item=>$value){
@@ -386,11 +392,11 @@ function profile(){
             if (form::check($_POST, array('pay'))){
                 echo 'pay now';
                 echo $_POST['address'];
-                $price=$this->formModel->set_final_factor($factor_id,$_POST['address']);
+                $price=$this->formModel->set_final_factor($factor_id,$_POST['address'],$barg);
                 die();
             }
             $data=$this->formModel->show_factor($factor_id);
-            $this->view('cp/review_factor',['data'=>$data,'address'=>$address]);
+            $this->view('cp/review_factor',['data'=>$data,'address'=>$address,'barg'=>$barg]);
         }
     function remove_from_list($id){
         $this->formModel->remove_from_list($id);

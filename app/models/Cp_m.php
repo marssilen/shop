@@ -8,6 +8,13 @@ parent::__construct();
 function get_file($name){
     return $this->db->select('select * from image WHERE image=:name',array('name'=>$name));
 }
+function get_bargPerc(){
+    $result=$this->db->select('select barperc from userlist where id=:id',array('id'=>Session::get('id')));
+    if(isset($result[0])){
+        return $result[0]['barperc'];
+    }
+    return 0;
+}
 function change_file($name,$oldfilename){
     rename('public/upload/'.$oldfilename,'public/upload/'.$name);
     return $name;
@@ -189,7 +196,7 @@ return $result;
 }
 
 
-function set_final_factor($factor_id,$address){
+function set_final_factor($factor_id,$address,$barg){
 $sql="SELECT num,price FROM purchased where factor_id=$factor_id";
 $result=$this->db->query($sql);
 $result->setFetchMode(PDO::FETCH_ASSOC);
@@ -197,6 +204,7 @@ $whole_price=0;
 foreach ($result as $item){
 $whole_price+=$item['price']*$item['num'];
 }
+    $whole_price= $whole_price-$whole_price*$barg/100;
 $timestamp = date('Y-m-d H:i:s');
 $result=$this->db->update("factors",array('factor_price'=>$whole_price,'status'=>1,'date'=>$timestamp,'address'=>$address),'id='.$factor_id);
 return $whole_price;

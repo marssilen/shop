@@ -124,8 +124,11 @@ foreach($data['data'] as $item){
 
 </table>
 </div>
-<div  class="w3-container">
-    <p class="w3-margin-16">مبلغ قابل پرداخت: <?= $factor_price ?></p>
+
+    <p class="w3-yellow w3-container">مبلغ کل: <?= $factor_price ?><br>
+    تخفیف: <?= $factor_price*$data['barg']/100 ?><br>
+    مبلغ قابل پرداخت: <?= $factor_price-$factor_price*$data['barg']/100 ?></p>
+    <div  class="w3-container">
     <?php
     if(count($data['address'])!=0){
         ?>
@@ -140,7 +143,7 @@ foreach($data['data'] as $item){
         <?php
     }
     ?>
-</div>
+    </div>
 <div  class="w3-container w3-padding-16">
 <!-- <form action=""> -->
 <!-- <p>
